@@ -1,0 +1,432 @@
+{
+  "schema_version": "3",
+  "note": "거래국 선택과 결제통화 지원 범위만 제공하는 카탈로그. 국가위험등급·거시지표·예측값은 포함하지 않는다. currency_coverage=settlement_currency_only인 국가는 지원되는 실제 결제통화를 직접 선택해야 한다.",
+  "countries": {
+    "US": {
+      "name": "미국",
+      "currency": "USD",
+      "currency_coverage": "supported",
+      "notes": "USD 결제통화 계산 지원."
+    },
+    "CN": {
+      "name": "중국",
+      "currency": "CNY",
+      "currency_coverage": "supported",
+      "notes": "CNY 결제통화 계산 지원."
+    },
+    "JP": {
+      "name": "일본",
+      "currency": "JPY",
+      "currency_coverage": "supported",
+      "notes": "JPY 결제통화 계산 지원."
+    },
+    "VN": {
+      "name": "베트남",
+      "currency": "VND",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "VND 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "DE": {
+      "name": "독일",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "FR": {
+      "name": "프랑스",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "GB": {
+      "name": "영국",
+      "currency": "GBP",
+      "currency_coverage": "supported",
+      "notes": "GBP 결제통화 계산 지원."
+    },
+    "IT": {
+      "name": "이탈리아",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "NL": {
+      "name": "네덜란드",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "BE": {
+      "name": "벨기에",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "ES": {
+      "name": "스페인",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "PL": {
+      "name": "폴란드",
+      "currency": "PLN",
+      "currency_coverage": "supported",
+      "notes": "PLN 결제통화 계산 지원."
+    },
+    "CZ": {
+      "name": "체코",
+      "currency": "CZK",
+      "currency_coverage": "supported",
+      "notes": "CZK 결제통화 계산 지원."
+    },
+    "HU": {
+      "name": "헝가리",
+      "currency": "HUF",
+      "currency_coverage": "supported",
+      "notes": "HUF 결제통화 계산 지원."
+    },
+    "RO": {
+      "name": "루마니아",
+      "currency": "RON",
+      "currency_coverage": "supported",
+      "notes": "RON 결제통화 계산 지원."
+    },
+    "AT": {
+      "name": "오스트리아",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "IE": {
+      "name": "아일랜드",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "PT": {
+      "name": "포르투갈",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "FI": {
+      "name": "핀란드",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "GR": {
+      "name": "그리스",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "SK": {
+      "name": "슬로바키아",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "SI": {
+      "name": "슬로베니아",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "LT": {
+      "name": "리투아니아",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "LV": {
+      "name": "라트비아",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "EE": {
+      "name": "에스토니아",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "LU": {
+      "name": "룩셈부르크",
+      "currency": "EUR",
+      "currency_coverage": "supported",
+      "notes": "EUR 결제통화 계산 지원."
+    },
+    "CH": {
+      "name": "스위스",
+      "currency": "CHF",
+      "currency_coverage": "supported",
+      "notes": "CHF 결제통화 계산 지원."
+    },
+    "SE": {
+      "name": "스웨덴",
+      "currency": "SEK",
+      "currency_coverage": "supported",
+      "notes": "SEK 결제통화 계산 지원."
+    },
+    "NO": {
+      "name": "노르웨이",
+      "currency": "NOK",
+      "currency_coverage": "supported",
+      "notes": "NOK 결제통화 계산 지원."
+    },
+    "DK": {
+      "name": "덴마크",
+      "currency": "DKK",
+      "currency_coverage": "supported",
+      "notes": "DKK 결제통화 계산 지원."
+    },
+    "IS": {
+      "name": "아이슬란드",
+      "currency": "ISK",
+      "currency_coverage": "supported",
+      "notes": "ISK 결제통화 계산 지원."
+    },
+    "TR": {
+      "name": "튀르키예",
+      "currency": "TRY",
+      "currency_coverage": "supported",
+      "notes": "TRY 결제통화 계산 지원."
+    },
+    "CA": {
+      "name": "캐나다",
+      "currency": "CAD",
+      "currency_coverage": "supported",
+      "notes": "CAD 결제통화 계산 지원."
+    },
+    "MX": {
+      "name": "멕시코",
+      "currency": "MXN",
+      "currency_coverage": "supported",
+      "notes": "MXN 결제통화 계산 지원."
+    },
+    "BR": {
+      "name": "브라질",
+      "currency": "BRL",
+      "currency_coverage": "supported",
+      "notes": "BRL 결제통화 계산 지원."
+    },
+    "AR": {
+      "name": "아르헨티나",
+      "currency": "ARS",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "ARS 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "CL": {
+      "name": "칠레",
+      "currency": "CLP",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "CLP 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "PE": {
+      "name": "페루",
+      "currency": "PEN",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "PEN 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "CO": {
+      "name": "콜롬비아",
+      "currency": "COP",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "COP 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "AU": {
+      "name": "호주",
+      "currency": "AUD",
+      "currency_coverage": "supported",
+      "notes": "AUD 결제통화 계산 지원."
+    },
+    "NZ": {
+      "name": "뉴질랜드",
+      "currency": "NZD",
+      "currency_coverage": "supported",
+      "notes": "NZD 결제통화 계산 지원."
+    },
+    "SG": {
+      "name": "싱가포르",
+      "currency": "SGD",
+      "currency_coverage": "supported",
+      "notes": "SGD 결제통화 계산 지원."
+    },
+    "HK": {
+      "name": "홍콩",
+      "currency": "HKD",
+      "currency_coverage": "supported",
+      "notes": "HKD 결제통화 계산 지원."
+    },
+    "TW": {
+      "name": "대만",
+      "currency": "TWD",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "TWD 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "IN": {
+      "name": "인도",
+      "currency": "INR",
+      "currency_coverage": "supported",
+      "notes": "INR 결제통화 계산 지원."
+    },
+    "ID": {
+      "name": "인도네시아",
+      "currency": "IDR",
+      "currency_coverage": "supported",
+      "notes": "IDR 결제통화 계산 지원."
+    },
+    "MY": {
+      "name": "말레이시아",
+      "currency": "MYR",
+      "currency_coverage": "supported",
+      "notes": "MYR 결제통화 계산 지원."
+    },
+    "TH": {
+      "name": "태국",
+      "currency": "THB",
+      "currency_coverage": "supported",
+      "notes": "THB 결제통화 계산 지원."
+    },
+    "PH": {
+      "name": "필리핀",
+      "currency": "PHP",
+      "currency_coverage": "supported",
+      "notes": "PHP 결제통화 계산 지원."
+    },
+    "BD": {
+      "name": "방글라데시",
+      "currency": "BDT",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "BDT 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "KH": {
+      "name": "캄보디아",
+      "currency": "KHR",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "KHR 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "MM": {
+      "name": "미얀마",
+      "currency": "MMK",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "MMK 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "PK": {
+      "name": "파키스탄",
+      "currency": "PKR",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "PKR 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "LK": {
+      "name": "스리랑카",
+      "currency": "LKR",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "LKR 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "NP": {
+      "name": "네팔",
+      "currency": "NPR",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "NPR 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "MN": {
+      "name": "몽골",
+      "currency": "MNT",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "MNT 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "AE": {
+      "name": "아랍에미리트",
+      "currency": "AED",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "AED 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "SA": {
+      "name": "사우디아라비아",
+      "currency": "SAR",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "SAR 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "QA": {
+      "name": "카타르",
+      "currency": "QAR",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "QAR 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "KW": {
+      "name": "쿠웨이트",
+      "currency": "KWD",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "KWD 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "OM": {
+      "name": "오만",
+      "currency": "OMR",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "OMR 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "IL": {
+      "name": "이스라엘",
+      "currency": "ILS",
+      "currency_coverage": "supported",
+      "notes": "ILS 결제통화 계산 지원."
+    },
+    "ZA": {
+      "name": "남아프리카공화국",
+      "currency": "ZAR",
+      "currency_coverage": "supported",
+      "notes": "ZAR 결제통화 계산 지원."
+    },
+    "EG": {
+      "name": "이집트",
+      "currency": "EGP",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "EGP 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "MA": {
+      "name": "모로코",
+      "currency": "MAD",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "MAD 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "KE": {
+      "name": "케냐",
+      "currency": "KES",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "KES 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "NG": {
+      "name": "나이지리아",
+      "currency": "NGN",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "NGN 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "KZ": {
+      "name": "카자흐스탄",
+      "currency": "KZT",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "KZT 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "UZ": {
+      "name": "우즈베키스탄",
+      "currency": "UZS",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "UZS 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "RU": {
+      "name": "러시아",
+      "currency": "RUB",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "RUB 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    },
+    "UA": {
+      "name": "우크라이나",
+      "currency": "UAH",
+      "currency_coverage": "settlement_currency_only",
+      "notes": "UAH 현지통화 계산은 현재 미지원이며 실제 계약의 지원 결제통화를 선택해야 한다."
+    }
+  }
+}

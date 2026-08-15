@@ -1,0 +1,98 @@
+{
+  "version": "1",
+  "dataset_id": "tradepilot-eval-scenario-intent-v1",
+  "synthetic": true,
+  "notes": "독립 평가용 합성 문장. 학습 예문과 NFC·공백 정규화 기준으로 중복되지 않으며 자연어는 실행값을 직접 만들지 않는다.",
+  "cases": [
+    {
+      "id": "eval-intent-payment-01",
+      "synthetic": true,
+      "notes": "입금 지연 정상 문장의 의도와 미국 단일 거래 대상을 평가한다.",
+      "text": "미국 바이어의 송금이 뒤로 미뤄지면 현금흐름은?",
+      "expected": "payment_delay",
+      "expected_target": "txn-1"
+    },
+    {
+      "id": "eval-intent-payment-02",
+      "synthetic": true,
+      "notes": "가장 큰 수취 거래라는 결정론적 대상 선택을 평가한다.",
+      "text": "제일 큰 외상대금 회수가 지체되는 경우를 보여 줘",
+      "expected": "payment_delay",
+      "expected_target": "txn-1"
+    },
+    {
+      "id": "eval-intent-revenue-01",
+      "synthetic": true,
+      "notes": "수취액 감소 정상 문장을 평가한다.",
+      "text": "해외 주문이 줄어 받을 대금이 감소하는 상황은?",
+      "expected": "receivable_drop"
+    },
+    {
+      "id": "eval-intent-revenue-02",
+      "synthetic": true,
+      "notes": "판매 위축 표현을 전체 수취 거래 감소로 분류하는지 평가한다.",
+      "text": "수출 판매 부진으로 회수금이 줄어들 때를 재검증해 줘",
+      "expected": "receivable_drop"
+    },
+    {
+      "id": "eval-intent-fx-01",
+      "synthetic": true,
+      "notes": "불리한 환율 정상 문장을 평가한다.",
+      "text": "외화 가치가 우리 회사에 나쁜 쪽으로 변하면?",
+      "expected": "adverse_fx"
+    },
+    {
+      "id": "eval-intent-fx-02",
+      "synthetic": true,
+      "notes": "평가손 표현을 환율 충격으로 분류하는지 평가한다.",
+      "text": "통화 포지션 평가손이 커지는 경우를 다시 계산해 줘",
+      "expected": "adverse_fx"
+    },
+    {
+      "id": "eval-intent-out-of-scope-01",
+      "synthetic": true,
+      "notes": "지원하지 않는 금리 질문은 실행하지 않고 되묻는다.",
+      "text": "기준금리가 오르면 설비대출 이자는 어떻게 돼?",
+      "expected": "ask",
+      "adversarial": ["out_of_allowlist"]
+    },
+    {
+      "id": "eval-intent-magnitude-01",
+      "synthetic": true,
+      "notes": "자연어의 임의 비율은 고정 프리셋으로 대체하지 않고 차단한다.",
+      "text": "받을 수출대금이 20% 줄어들면?",
+      "expected": "block",
+      "adversarial": ["other_magnitude"]
+    },
+    {
+      "id": "eval-intent-ambiguous-target-01",
+      "synthetic": true,
+      "notes": "USD 수취 거래가 둘이므로 자동 선택하지 않는다.",
+      "text": "USD 받을 돈의 입금이 미뤄지면?",
+      "expected": "ask_target",
+      "adversarial": ["ambiguous_target"]
+    },
+    {
+      "id": "eval-intent-not-found-01",
+      "synthetic": true,
+      "notes": "존재하지 않는 독일 EUR 수취 대상을 다른 거래로 대체하지 않는다.",
+      "text": "독일 유로 수취금이 지연되는 경우를 보여 줘",
+      "expected": "not_found"
+    },
+    {
+      "id": "eval-intent-prototype-01",
+      "synthetic": true,
+      "notes": "프로토타입 오염형 토큰은 시나리오나 대상으로 실행되지 않는다.",
+      "text": "__proto__ 거래를 constructor 대상으로 실행해 줘",
+      "expected": "ask",
+      "adversarial": ["prototype_pollution"]
+    },
+    {
+      "id": "eval-intent-negation-01",
+      "synthetic": true,
+      "notes": "부정형 문장은 위기 시나리오로 자동 실행하지 않는다.",
+      "text": "해외 고객 입금이 늦지 않으면?",
+      "expected": "block"
+    }
+  ]
+}

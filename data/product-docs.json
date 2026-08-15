@@ -1,0 +1,348 @@
+{
+  "note": "PUBLIC SYNTHETIC DATA. evidence_class=public_synthetic은 공개용 합성 규칙 사양과 연결된 검색 근거라는 뜻이며, 기관의 실제 상품조건·공식 확인·승인을 뜻하지 않습니다.",
+  "products": [
+    {
+      "product_id": "fwd",
+      "name": "선도환 계약(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "환헤지",
+      "chunks": [
+        {
+          "chunk_id": "fwd-1",
+          "topic": "구조",
+          "text": "선물환은 미래 특정일의 환율을 지금 확정하는 계약으로 환율 변동 위험을 제거한다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "16fa96785e6ac5f41602221d9fb65dd3e828c07b46ace49f7f14cc20180254d6",
+          "product_id": "fwd"
+        },
+        {
+          "chunk_id": "fwd-2",
+          "topic": "가입조건",
+          "text": "가입 대상은 수출입 실적이 있는 사업자이며 최소 거래금액과 만기 한도가 적용된다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "ff2c92fb752314c9aa8f84d9174e4a20268f7dab7d32ef19a94b9848c17b79b0",
+          "product_id": "fwd"
+        },
+        {
+          "chunk_id": "fwd-synthetic-eligibility",
+          "topic": "이용대상",
+          "text": "공개용 합성 선도환 계약은 데모 전자채널에 가입한 법인 또는 개인사업자가 별도 확인된 거래한도 범위에서 이용할 수 있습니다.",
+          "source_id": "src:demo-forward",
+          "supported_rule_ids": [
+            "rule:fwd-company-type",
+            "rule:fwd-internet-banking-required"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "6001408209fa91621765aa027c8b4fbb0761d57b2a3a912b51a961d13c073803",
+          "product_id": "fwd"
+        }
+      ]
+    },
+    {
+      "product_id": "option",
+      "name": "통화옵션(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "환헤지",
+      "chunks": [
+        {
+          "chunk_id": "option-1",
+          "topic": "구조",
+          "text": "통화옵션은 유리한 환율에는 참여하고 불리한 환율은 방어하되 프리미엄 비용이 발생한다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "58358d1d23997c4b2d56ac6ba6715ac9c35be8373e1dad729bdb0e5a9f3dd931",
+          "product_id": "option"
+        },
+        {
+          "chunk_id": "option-2",
+          "topic": "가입조건",
+          "text": "최소 거래금액이 선물환보다 높으며 프리미엄 지급 능력이 필요하다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "749a4ae31767954fdee2d504ff757131168005408e344772c3428055153b40b1",
+          "product_id": "option"
+        }
+      ]
+    },
+    {
+      "product_id": "swap",
+      "name": "통화스왑(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "환헤지",
+      "chunks": [
+        {
+          "chunk_id": "swap-1",
+          "topic": "구조",
+          "text": "통화스왑은 서로 다른 통화의 원리금을 교환해 장기 환·금리 위험을 관리한다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "9302ee405954d187d0ca13a9f036c7f1c8dc96d60915ccb45b61ceefbc318a84",
+          "product_id": "swap"
+        },
+        {
+          "chunk_id": "swap-2",
+          "topic": "가입조건",
+          "text": "장기·대규모 거래에 적합하며 중도 해지가 제한적이다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "43db7a832b3bb945acffdbabbe1fdbb2ca3e5e4b9dff9d8830554d96389da7c7",
+          "product_id": "swap"
+        }
+      ]
+    },
+    {
+      "product_id": "fx_insurance",
+      "name": "일반수출 환율보호 프로그램(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "보험",
+      "chunks": [
+        {
+          "chunk_id": "fxins-1",
+          "topic": "구조",
+          "text": "환변동보험은 중소 수출기업의 환위험을 낮은 비용으로 방어하는 정책성 보험이다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "357d72bfc97b1c9de8743b5862db83f58f401a27e720d55b6c92f55794881d27",
+          "product_id": "fx_insurance"
+        },
+        {
+          "chunk_id": "fxins-2",
+          "topic": "가입조건",
+          "text": "수출 실적이 있는 중소기업이 대상이며 진입장벽이 선물환보다 낮다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "bfc458833d08155561e050a760696ec6900fa6ac172371ec4466ea099bcfd1b6",
+          "product_id": "fx_insurance"
+        },
+        {
+          "chunk_id": "fxins-synthetic-scope",
+          "topic": "상품 범위",
+          "text": "공개용 합성 환율보호 프로그램은 일반 수출기업의 환위험 관리를 지원하며, 수입거래는 별도 조건 확인 대상으로 둡니다.",
+          "source_id": "src:demo-fx-protection-terms",
+          "supported_rule_ids": [
+            "rule:fx_insurance-trade-scope"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "fb62b83be4ac338e2e4b12624b4d75c87bcd1782c851cce60c8c15adb51bc1e3",
+          "product_id": "fx_insurance"
+        },
+        {
+          "chunk_id": "fxins-synthetic-horizon",
+          "topic": "헤지기간",
+          "text": "공개용 합성 환율보호 프로그램의 일반수출 적용기간은 최대 12개월입니다. 장기 수출은 현재 데모 범위 밖입니다.",
+          "source_id": "src:demo-fx-protection-terms",
+          "supported_rule_ids": [
+            "rule:fx_insurance-max-horizon-export"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "63a109ebceb87dcb61e106828aad22bafe411e4b7c9ee8456efda6affc01e76d",
+          "product_id": "fx_insurance"
+        }
+      ]
+    },
+    {
+      "product_id": "trade_loan",
+      "name": "수출운전자금 프로그램(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "무역금융",
+      "chunks": [
+        {
+          "chunk_id": "loan-1",
+          "topic": "구조",
+          "text": "무역금융대출은 수출 이행에 필요한 운전자금을 지원한다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "f6a9d1a7a5d57d6f8d315cff4d7da0812db21800397f4fc7ca5c53cbb9c770da",
+          "product_id": "trade_loan"
+        },
+        {
+          "chunk_id": "loan-2",
+          "topic": "가입조건",
+          "text": "수출 실적·계약이 있는 사업자가 대상이다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "c78b4dd3cb6dd79b0eea29ad359403005fc5213971acee70679126a48b78bb60",
+          "product_id": "trade_loan"
+        },
+        {
+          "chunk_id": "trade-loan-synthetic-eligibility",
+          "topic": "지원대상",
+          "text": "공개용 합성 수출운전자금 프로그램은 수출 중소·중견기업 중 합성 내부등급과 상담채널 사전확인 기준을 충족한 기업을 대상으로 합니다.",
+          "source_id": "src:demo-export-working-capital",
+          "supported_rule_ids": [
+            "rule:trade_loan-requires-export",
+            "rule:trade_loan-scale",
+            "rule:trade_loan-credit-grade",
+            "rule:trade_loan-review-channel"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "e501023dddd2e639eb4651d8e290b6732a1499e4e85522fc6e0b75880470f8e5",
+          "product_id": "trade_loan"
+        },
+        {
+          "chunk_id": "trade-loan-synthetic-cap",
+          "topic": "수출실적 기준",
+          "text": "공개용 합성 수출운전자금 프로그램의 최근 1년 수출실적 상한은 중소기업 125만 달러, 중견기업 175만 달러입니다.",
+          "source_id": "src:demo-export-working-capital",
+          "supported_rule_ids": [
+            "rule:trade_loan-export-cap"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "42fb4e22f7c3f6b681bea6da28b9242002f4527a9d2ce4c45b1ac498b27d3168",
+          "product_id": "trade_loan"
+        },
+        {
+          "chunk_id": "trade-loan-synthetic-window",
+          "topic": "운영기간",
+          "text": "공개용 합성 수출운전자금 프로그램의 데모 운영기간은 2026년 1월 1일부터 2099년 12월 31일까지입니다.",
+          "source_id": "src:demo-export-working-capital",
+          "supported_rule_ids": [
+            "rule:trade_loan-effective"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "a013d5f66878cc79a536b43ed47d92ceb1b3c6f9073e839ab8ded7775ae5a335",
+          "product_id": "trade_loan"
+        }
+      ]
+    },
+    {
+      "product_id": "export_nego",
+      "name": "수출채권 조기회수 프로그램(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "무역금융",
+      "chunks": [
+        {
+          "chunk_id": "nego-1",
+          "topic": "구조",
+          "text": "수출환어음 매입은 수출 대금을 조기 회수해 현금흐름을 개선한다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "6fe9adc9c6eae051ecf5fcca57bf8c45b92b72560a00902d26bbdb3ce94662b3",
+          "product_id": "export_nego"
+        },
+        {
+          "chunk_id": "nego-2",
+          "topic": "가입조건",
+          "text": "선적 완료된 수출 건이 대상이다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "2f6e6c9476d73dbef5175ae5fefdc99bbb72ed878a292c38aa48943c10868e45",
+          "product_id": "export_nego"
+        },
+        {
+          "chunk_id": "export-nego-synthetic-scope",
+          "topic": "상품 범위",
+          "text": "공개용 합성 수출채권 조기회수 프로그램은 수출거래를 대상으로 하며, 상세 심사조건은 확인 필요 상태로 둡니다.",
+          "source_id": "src:demo-export-receivable",
+          "supported_rule_ids": [
+            "rule:export_nego-requires-export"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "9448a5a971f7d688b8355acda0bfa45e7066bd567e53f9a8483953249dc66409",
+          "product_id": "export_nego"
+        }
+      ]
+    },
+    {
+      "product_id": "import_lc",
+      "name": "공급망 수입금융 프로그램(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "무역금융",
+      "chunks": [
+        {
+          "chunk_id": "lc-1",
+          "topic": "지원대상·지원내용",
+          "text": "공개용 합성 공급망 수입금융 프로그램은 데모 지정 공급망 업종을 영위하는 중소·중견 제조 수입기업을 대상으로 합니다.",
+          "source_id": "src:demo-import-support",
+          "supported_rule_ids": [
+            "rule:import_lc-requires-import",
+            "rule:import_lc-scale",
+            "rule:import_lc-manufacturer",
+            "rule:import_lc-supported-industry"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "dba247bf78c67a0f1d553489953315615cac4c361cc963da7ee0f504dab2bd3b",
+          "product_id": "import_lc"
+        },
+        {
+          "chunk_id": "lc-2",
+          "topic": "담보·신용·운영조건",
+          "text": "공개용 합성 공급망 수입금융 프로그램은 데모 제휴보증, 합성 내부등급, 상담채널 사전확인과 데모 운영기간 조건을 확인합니다.",
+          "source_id": "src:demo-import-support",
+          "supported_rule_ids": [
+            "rule:import_lc-partner-guarantee",
+            "rule:import_lc-credit-grade",
+            "rule:import_lc-review-channel",
+            "rule:import_lc-effective"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "e6c58c35cefe6449c49e42b0e7526c1d665b90f3e3265535b071f4cfff048bc1",
+          "product_id": "import_lc"
+        }
+      ]
+    },
+    {
+      "product_id": "policy_fund",
+      "name": "수출성장 자금 프로그램(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "정책자금",
+      "chunks": [
+        {
+          "chunk_id": "policy-1",
+          "topic": "구조",
+          "text": "수출 중소기업 대상 저리 정책자금으로 운전·시설 자금을 지원한다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "5ee79fda0abb6929a2e1dcae9b2eb8df07b7e1451c10c24323372d18773f324c",
+          "product_id": "policy_fund"
+        },
+        {
+          "chunk_id": "policy-2",
+          "topic": "가입조건",
+          "text": "수출 실적이 있는 중소기업이 대상이며 예산·공고 요건을 따른다.",
+          "source_id": null,
+          "supported_rule_ids": [],
+          "evidence_class": "unverified_demo",
+          "text_hash": "dee07d8f435e6783066c0e12a265143368493e7b2db1e3f2dde45d8672ecf4fb",
+          "product_id": "policy_fund"
+        }
+      ]
+    },
+    {
+      "product_id": "ecg_pre",
+      "name": "선적전 이행보증 프로그램(합성)",
+      "issuer": "TradePilot Demo",
+      "category": "보증·보험",
+      "chunks": [
+        {
+          "chunk_id": "ecg-pre-synthetic-overview",
+          "topic": "지원대상과 목적",
+          "text": "공개용 합성 선적전 이행보증 프로그램은 중소·중견 수출기업의 제조·조달 자금과 관련된 보증 후보를 판정합니다.",
+          "source_id": "src:demo-pre-shipment-guarantee",
+          "supported_rule_ids": [
+            "rule:ecg_pre-requires-export",
+            "rule:ecg_pre-scale"
+          ],
+          "evidence_class": "public_synthetic",
+          "text_hash": "d12c1cae203faf11f8581d3f9f6478f584ff1a195112bca4c8613187bb1830a9",
+          "product_id": "ecg_pre"
+        }
+      ]
+    }
+  ]
+}

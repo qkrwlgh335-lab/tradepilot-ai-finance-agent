@@ -1,0 +1,123 @@
+{
+  "version": "public-demo-v1",
+  "note": "PUBLIC SANITIZED DATA. 원 출품작의 출처-규칙 연결 구조를 유지하되 기관별 실제 페이지와 상품조건은 공개용 합성 규칙 사양으로 교체했다.",
+  "sources": [
+    {
+      "source_id": "src:demo-fx-protection-terms",
+      "product_id": "fx_insurance",
+      "institution": "TradePilot 공개용 데모",
+      "document_title": "TradePilot 공개용 합성 규칙 사양",
+      "url": "https://github.com/qkrwlgh335-lab/tradepilot-ai-finance-agent/blob/main/docs/PUBLIC_DEMO_RULES.md#fx_insurance",
+      "source_kind": "product_terms",
+      "verification_status": "verified",
+      "verified_on": "2026-08-16",
+      "supported_fields": [
+        "eligibility.trade_scope",
+        "eligibility.max_horizon_months_export",
+        "eligibility.limit_basis"
+      ],
+      "page_or_section": "환율보호 프로그램 합성 규칙"
+    },
+    {
+      "source_id": "src:demo-fx-protection-costs",
+      "product_id": "fx_insurance",
+      "institution": "TradePilot 공개용 데모",
+      "document_title": "TradePilot 공개용 합성 규칙 사양",
+      "url": "https://github.com/qkrwlgh335-lab/tradepilot-ai-finance-agent/blob/main/docs/PUBLIC_DEMO_RULES.md#fx_insurance",
+      "source_kind": "product_terms",
+      "verification_status": "verified",
+      "verified_on": "2026-08-16",
+      "supported_fields": [
+        "cost.rate_table",
+        "cost.sme_discount"
+      ],
+      "page_or_section": "환율보호 비용 합성 규칙"
+    },
+    {
+      "source_id": "src:demo-export-working-capital",
+      "product_id": "trade_loan",
+      "institution": "TradePilot 공개용 데모",
+      "document_title": "TradePilot 공개용 합성 규칙 사양",
+      "url": "https://github.com/qkrwlgh335-lab/tradepilot-ai-finance-agent/blob/main/docs/PUBLIC_DEMO_RULES.md#trade_loan",
+      "source_kind": "product_terms",
+      "verification_status": "verified",
+      "verified_on": "2026-08-16",
+      "supported_fields": [
+        "eligibility.requires_export",
+        "eligibility.company_scale",
+        "eligibility.credit_grade",
+        "eligibility.export_record_cap",
+        "eligibility.review_channel_confirmation",
+        "product.effective_window"
+      ],
+      "page_or_section": "수출운전자금 합성 규칙"
+    },
+    {
+      "source_id": "src:demo-pre-shipment-guarantee",
+      "product_id": "ecg_pre",
+      "institution": "TradePilot 공개용 데모",
+      "document_title": "TradePilot 공개용 합성 규칙 사양",
+      "url": "https://github.com/qkrwlgh335-lab/tradepilot-ai-finance-agent/blob/main/docs/PUBLIC_DEMO_RULES.md#ecg_pre",
+      "source_kind": "product_terms",
+      "verification_status": "verified",
+      "verified_on": "2026-08-16",
+      "supported_fields": [
+        "eligibility.requires_export",
+        "eligibility.company_scale",
+        "purpose.guarantee"
+      ],
+      "page_or_section": "선적전 보증 합성 규칙"
+    },
+    {
+      "source_id": "src:demo-export-receivable",
+      "product_id": "export_nego",
+      "institution": "TradePilot 공개용 데모",
+      "document_title": "TradePilot 공개용 합성 규칙 사양",
+      "url": "https://github.com/qkrwlgh335-lab/tradepilot-ai-finance-agent/blob/main/docs/PUBLIC_DEMO_RULES.md#export_nego",
+      "source_kind": "product_terms",
+      "verification_status": "verified",
+      "verified_on": "2026-08-16",
+      "supported_fields": [
+        "eligibility.requires_export",
+        "product.effective_window"
+      ],
+      "page_or_section": "수출채권 조기회수 합성 규칙"
+    },
+    {
+      "source_id": "src:demo-forward",
+      "product_id": "fwd",
+      "institution": "TradePilot 공개용 데모",
+      "document_title": "TradePilot 공개용 합성 규칙 사양",
+      "url": "https://github.com/qkrwlgh335-lab/tradepilot-ai-finance-agent/blob/main/docs/PUBLIC_DEMO_RULES.md#fwd",
+      "source_kind": "product_terms",
+      "verification_status": "verified",
+      "verified_on": "2026-08-16",
+      "supported_fields": [
+        "eligibility.company_type",
+        "eligibility.internet_banking_enrolled"
+      ],
+      "page_or_section": "선도환 합성 규칙"
+    },
+    {
+      "source_id": "src:demo-import-support",
+      "product_id": "import_lc",
+      "institution": "TradePilot 공개용 데모",
+      "document_title": "TradePilot 공개용 합성 규칙 사양",
+      "url": "https://github.com/qkrwlgh335-lab/tradepilot-ai-finance-agent/blob/main/docs/PUBLIC_DEMO_RULES.md#import_lc",
+      "source_kind": "product_terms",
+      "verification_status": "verified",
+      "verified_on": "2026-08-16",
+      "supported_fields": [
+        "eligibility.requires_import",
+        "eligibility.company_scale",
+        "eligibility.manufacturer",
+        "eligibility.demo_supply_chain_scope",
+        "eligibility.partner_guarantee",
+        "eligibility.credit_grade",
+        "eligibility.review_channel_confirmation",
+        "product.effective_window"
+      ],
+      "page_or_section": "공급망 수입금융 합성 규칙"
+    }
+  ]
+}

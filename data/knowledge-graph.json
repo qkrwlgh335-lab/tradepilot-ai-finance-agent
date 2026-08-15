@@ -1,0 +1,423 @@
+{
+  "version": "public-demo-v1",
+  "as_of": "2026-08-16",
+  "note": "PUBLIC SANITIZED DATA. 실제 기관·상품조건 대신 합성 규칙과 데모 제공자를 사용한다. productKnowledgeStatus, 규칙 완전성, 출처 연결, knowledge gap 동작은 원 출품작과 동일한 계약으로 검증한다.",
+  "nodes": [
+    {
+      "id": "inst:demo_bank",
+      "type": "Institution",
+      "name": "TradePilot 데모은행"
+    },
+    {
+      "id": "inst:demo_guarantee",
+      "type": "Institution",
+      "name": "TradePilot 데모보증기관"
+    },
+    {
+      "id": "inst:demo_policy",
+      "type": "Institution",
+      "name": "TradePilot 데모정책기관"
+    },
+    {
+      "id": "risk:fx_rate",
+      "type": "Risk",
+      "name": "환율 변동 위험"
+    },
+    {
+      "id": "risk:liquidity",
+      "type": "Risk",
+      "name": "결제 유동성 위험"
+    },
+    {
+      "id": "risk:credit",
+      "type": "Risk",
+      "name": "신용·미회수 위험"
+    },
+    {
+      "id": "purpose:fx_hedge",
+      "type": "Purpose",
+      "name": "환헤지"
+    },
+    {
+      "id": "purpose:working_capital",
+      "type": "Purpose",
+      "name": "운전자금"
+    },
+    {
+      "id": "purpose:export_receivable",
+      "type": "Purpose",
+      "name": "수출대금 회수"
+    },
+    {
+      "id": "purpose:guarantee_insurance",
+      "type": "Purpose",
+      "name": "보증·보험"
+    },
+    {
+      "id": "purpose:policy_fund",
+      "type": "Purpose",
+      "name": "정책자금"
+    },
+    {
+      "id": "prod:fwd",
+      "product_id": "fwd",
+      "type": "FinancialProduct",
+      "name": "선도환 계약(합성)",
+      "category": "환헤지",
+      "productKnowledgeStatus": "unavailable_invalid_knowledge"
+    },
+    {
+      "id": "prod:fx_insurance",
+      "product_id": "fx_insurance",
+      "type": "FinancialProduct",
+      "name": "일반수출 환율보호 프로그램(합성)",
+      "category": "보험",
+      "productKnowledgeStatus": "available",
+      "scope_note": "공개용 합성 규칙은 일반수출 12개월 범위로 한정합니다. 장기·수입 거래는 범위 밖으로 두어 보류 동작을 검증합니다."
+    },
+    {
+      "id": "prod:trade_loan",
+      "product_id": "trade_loan",
+      "type": "FinancialProduct",
+      "name": "수출운전자금 프로그램(합성)",
+      "category": "무역금융",
+      "productKnowledgeStatus": "available"
+    },
+    {
+      "id": "prod:export_nego",
+      "product_id": "export_nego",
+      "type": "FinancialProduct",
+      "name": "수출채권 조기회수 프로그램(합성)",
+      "category": "무역금융",
+      "productKnowledgeStatus": "unavailable_invalid_knowledge"
+    },
+    {
+      "id": "prod:ecg_pre",
+      "product_id": "ecg_pre",
+      "type": "FinancialProduct",
+      "name": "선적전 이행보증 프로그램(합성)",
+      "category": "보증",
+      "productKnowledgeStatus": "available"
+    },
+    {
+      "id": "prod:option",
+      "product_id": "option",
+      "type": "FinancialProduct",
+      "name": "통화옵션(합성)",
+      "category": "환헤지",
+      "productKnowledgeStatus": "unavailable_unverified_source"
+    },
+    {
+      "id": "prod:swap",
+      "product_id": "swap",
+      "type": "FinancialProduct",
+      "name": "통화스왑(합성)",
+      "category": "환헤지",
+      "productKnowledgeStatus": "unavailable_unverified_source"
+    },
+    {
+      "id": "prod:import_lc",
+      "product_id": "import_lc",
+      "type": "FinancialProduct",
+      "name": "공급망 수입금융 프로그램(합성)",
+      "category": "무역금융",
+      "productKnowledgeStatus": "available",
+      "scope_note": "공개용 합성 규칙은 중소·중견 제조 수입기업, 데모 지정 공급망 업종, 제휴보증·내부등급·상담채널 확인을 요구합니다. 실제 금융상품 조건이 아닙니다."
+    },
+    {
+      "id": "prod:policy_fund",
+      "product_id": "policy_fund",
+      "type": "FinancialProduct",
+      "name": "수출성장 자금 프로그램(합성)",
+      "category": "정책자금",
+      "productKnowledgeStatus": "unavailable_unverified_source"
+    }
+  ],
+  "edges": [
+    {
+      "from": "prod:fwd",
+      "rel": "providedBy",
+      "to": "inst:demo_bank"
+    },
+    {
+      "from": "prod:fwd",
+      "rel": "mitigates",
+      "to": "risk:fx_rate"
+    },
+    {
+      "from": "prod:fwd",
+      "rel": "supportsPurpose",
+      "to": "purpose:fx_hedge"
+    },
+    {
+      "from": "prod:fwd",
+      "rel": "requires",
+      "to": "rule:fwd-company-type"
+    },
+    {
+      "from": "prod:fwd",
+      "rel": "requires",
+      "to": "rule:fwd-internet-banking-required"
+    },
+    {
+      "from": "prod:fwd",
+      "rel": "supportedBy",
+      "to": "src:demo-forward"
+    },
+    {
+      "from": "prod:fx_insurance",
+      "rel": "providedBy",
+      "to": "inst:demo_guarantee"
+    },
+    {
+      "from": "prod:fx_insurance",
+      "rel": "mitigates",
+      "to": "risk:fx_rate"
+    },
+    {
+      "from": "prod:fx_insurance",
+      "rel": "supportsPurpose",
+      "to": "purpose:fx_hedge"
+    },
+    {
+      "from": "prod:fx_insurance",
+      "rel": "requires",
+      "to": "rule:fx_insurance-trade-scope"
+    },
+    {
+      "from": "prod:fx_insurance",
+      "rel": "requires",
+      "to": "rule:fx_insurance-max-horizon-export"
+    },
+    {
+      "from": "prod:fx_insurance",
+      "rel": "supportedBy",
+      "to": "src:demo-fx-protection-terms"
+    },
+    {
+      "from": "prod:fx_insurance",
+      "rel": "supportedBy",
+      "to": "src:demo-fx-protection-costs"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "providedBy",
+      "to": "inst:demo_bank"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "mitigates",
+      "to": "risk:liquidity"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "supportsPurpose",
+      "to": "purpose:working_capital"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "requires",
+      "to": "rule:trade_loan-requires-export"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "requires",
+      "to": "rule:trade_loan-scale"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "requires",
+      "to": "rule:trade_loan-credit-grade"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "requires",
+      "to": "rule:trade_loan-export-cap"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "requires",
+      "to": "rule:trade_loan-review-channel"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "requires",
+      "to": "rule:trade_loan-effective"
+    },
+    {
+      "from": "prod:trade_loan",
+      "rel": "supportedBy",
+      "to": "src:demo-export-working-capital"
+    },
+    {
+      "from": "prod:export_nego",
+      "rel": "providedBy",
+      "to": "inst:demo_bank"
+    },
+    {
+      "from": "prod:export_nego",
+      "rel": "mitigates",
+      "to": "risk:liquidity"
+    },
+    {
+      "from": "prod:export_nego",
+      "rel": "supportsPurpose",
+      "to": "purpose:export_receivable"
+    },
+    {
+      "from": "prod:export_nego",
+      "rel": "requires",
+      "to": "rule:export_nego-requires-export"
+    },
+    {
+      "from": "prod:export_nego",
+      "rel": "supportedBy",
+      "to": "src:demo-export-receivable"
+    },
+    {
+      "from": "prod:ecg_pre",
+      "rel": "providedBy",
+      "to": "inst:demo_guarantee"
+    },
+    {
+      "from": "prod:ecg_pre",
+      "rel": "mitigates",
+      "to": "risk:credit"
+    },
+    {
+      "from": "prod:ecg_pre",
+      "rel": "supportsPurpose",
+      "to": "purpose:guarantee_insurance"
+    },
+    {
+      "from": "prod:ecg_pre",
+      "rel": "requires",
+      "to": "rule:ecg_pre-requires-export"
+    },
+    {
+      "from": "prod:ecg_pre",
+      "rel": "requires",
+      "to": "rule:ecg_pre-scale"
+    },
+    {
+      "from": "prod:ecg_pre",
+      "rel": "supportedBy",
+      "to": "src:demo-pre-shipment-guarantee"
+    },
+    {
+      "from": "prod:option",
+      "rel": "providedBy",
+      "to": "inst:demo_bank"
+    },
+    {
+      "from": "prod:option",
+      "rel": "mitigates",
+      "to": "risk:fx_rate"
+    },
+    {
+      "from": "prod:option",
+      "rel": "supportsPurpose",
+      "to": "purpose:fx_hedge"
+    },
+    {
+      "from": "prod:swap",
+      "rel": "providedBy",
+      "to": "inst:demo_bank"
+    },
+    {
+      "from": "prod:swap",
+      "rel": "mitigates",
+      "to": "risk:fx_rate"
+    },
+    {
+      "from": "prod:swap",
+      "rel": "supportsPurpose",
+      "to": "purpose:fx_hedge"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "providedBy",
+      "to": "inst:demo_bank"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "mitigates",
+      "to": "risk:liquidity"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "supportsPurpose",
+      "to": "purpose:working_capital"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-requires-import"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-scale"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-manufacturer"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-supported-industry"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-partner-guarantee"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-credit-grade"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-review-channel"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "requires",
+      "to": "rule:import_lc-effective"
+    },
+    {
+      "from": "prod:import_lc",
+      "rel": "supportedBy",
+      "to": "src:demo-import-support"
+    },
+    {
+      "from": "prod:policy_fund",
+      "rel": "providedBy",
+      "to": "inst:demo_policy"
+    },
+    {
+      "from": "prod:policy_fund",
+      "rel": "mitigates",
+      "to": "risk:liquidity"
+    },
+    {
+      "from": "prod:policy_fund",
+      "rel": "supportsPurpose",
+      "to": "purpose:policy_fund"
+    },
+    {
+      "from": "prod:fwd",
+      "rel": "requires",
+      "to": "rule:fwd-individual-limit-approved"
+    },
+    {
+      "from": "prod:export_nego",
+      "rel": "requires",
+      "to": "rule:export_nego-detailed-eligibility"
+    }
+  ]
+}

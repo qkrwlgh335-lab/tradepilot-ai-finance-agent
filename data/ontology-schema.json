@@ -1,0 +1,86 @@
+{
+  "version": "rev3",
+  "note": "경량 JSON 온톨로지. OWL/RDF/SPARQL 미사용, 브라우저 오프라인 실행. SHACL의 그래프 제약 검증 원리를 참고한 경량 폐쇄형 검증기.",
+  "operators": ["eq", "neq", "gte", "lte", "gt", "lt", "in", "not_in", "includes_any", "subset_of", "between", "is_true", "is_false", "date_within", "lte_by"],
+  "operatorValueKinds": {
+    "eq": "any_required", "neq": "any_required",
+    "gt": "number", "gte": "number", "lt": "number", "lte": "number",
+    "in": "non_empty_array", "not_in": "non_empty_array", "includes_any": "non_empty_array", "subset_of": "non_empty_array",
+    "between": "range2", "date_within": "date_range", "lte_by": "threshold_map",
+    "is_true": "none", "is_false": "none"
+  },
+  "operatorFactTypes": {
+    "is_true": ["boolean"], "is_false": ["boolean"],
+    "gt": ["number"], "gte": ["number"], "lt": ["number"], "lte": ["number"], "lte_by": ["number"], "between": ["number"],
+    "in": ["enum", "string"], "not_in": ["enum", "string"], "includes_any": ["array"], "subset_of": ["array"],
+    "date_within": ["date"],
+    "eq": ["boolean", "number", "enum", "string", "date"], "neq": ["boolean", "number", "enum", "string", "date"]
+  },
+  "ruleFactCatalog": {
+    "company.hasExport":               { "type": "boolean", "question": "각 거래의 수출/수입 구분을 입력해 주세요." },
+    "company.hasImport":               { "type": "boolean", "question": "수입 거래가 있는지 확인해 주세요." },
+    "company.companyScale":            { "type": "enum", "values": ["sme", "mid_market", "other", "unknown"], "question": "기업 규모(중소/중견/기타)를 확인해 주세요." },
+    "company.companyType":             { "type": "enum", "values": ["corporation", "sole_proprietor"], "question": "기업 형태(법인/개인사업자)를 선택해 주세요." },
+    "company.isManufacturer":          { "type": "boolean", "question": "제조기업 해당 여부를 확인해 주세요." },
+    "company.supplyChainProgramEligible": { "type": "boolean", "question": "데모 지정 공급망 업종 업종 해당 여부를 확인해 주세요." },
+    "company.partnerGuaranteeConfirmed": { "type": "boolean", "question": "데모보증기관 수입보험(글로벌공급망) 보험증권 발급·담보 가능 여부를 확인해 주세요." },
+    "company.creditGradeMeetsThreshold": { "type": "boolean", "question": "합성 내부등급 기준을 충족하는지 확인해 주세요." },
+    "company.priorYearExportUsd":      { "type": "number", "question": "최근 1년 수출실적(USD)을 입력해 주세요." },
+    "company.reviewChannelConfirmed":       { "type": "boolean", "question": "상담채널 사전확인 여부를 확인해 주세요." },
+    "company.internetBankingEnrolled": { "type": "boolean", "question": "인터넷뱅킹 가입 여부를 확인해 주세요." },
+    "exposure.maxExportHorizonMonths": { "type": "number", "question": "일반수출 거래의 최대 노출 만기(개월)를 확인해 주세요." },
+    "context.today":                   { "type": "date", "question": "분석 기준일 정보가 필요합니다." }
+  },
+  "classes": {
+    "Company": {
+      "fields": {
+        "companyType":       { "type": "enum", "values": ["corporation", "sole_proprietor"], "required": true, "question": "기업 형태(법인/개인사업자)를 선택해 주세요." },
+        "isSme":             { "type": "boolean", "required": true, "question": "중소기업 여부를 선택해 주세요(추정하지 않습니다)." },
+        "riskAppetite":      { "type": "enum", "values": ["low", "medium", "high"], "required": true, "question": "위험성향(안정/중립/공격)을 선택해 주세요." },
+        "existingHedges":    { "type": "array", "required": true, "nullable_means_unknown": true, "question": "기존 헤지 계약이 있으면 통화·금액·만기를 입력하고, 없으면 '없음'으로 확정해 주세요.",
+                               "items": { "currency": "ref:Currency", "amount": "number>0", "maturityMonths": "number>=0", "instrumentType": "string?" } },
+        "requestedPurposes": { "type": "array", "required": true, "values": ["fx_hedge", "working_capital", "export_receivable", "guarantee_insurance", "policy_fund"], "question": "필요한 지원 목적을 선택해 주세요." }
+      }
+    },
+    "TradeTransaction": {
+      "fields": {
+        "transaction_id": { "type": "string", "required": false, "generated": true },
+        "tradeType":      { "type": "enum", "values": ["export", "import"], "required": true },
+        "direction":      { "type": "enum", "values": ["in", "out"], "required": true },
+        "country":        { "type": "ref", "class": "Country", "required": true },
+        "currency":       { "type": "ref", "class": "Currency", "required": true },
+        "amount":         { "type": "number", "exclusiveMin": 0, "required": true },
+        "months":         { "type": "number", "min": 0, "required": true }
+      }
+    },
+    "Exposure":        { "fields": { "currency": { "type": "ref", "class": "Currency" }, "months": { "type": "number" }, "netAtMaturity": { "type": "number" }, "krwValue": { "type": "number" } } },
+    "Risk":            { "enum_instances": ["fx_rate", "liquidity", "country", "credit"] },
+    "Purpose":         { "enum_instances": ["fx_hedge", "working_capital", "export_receivable", "guarantee_insurance", "policy_fund"] },
+    "Currency":        { "fields": { "code": { "type": "string" } } },
+    "Country":         { "fields": { "iso": { "type": "string" }, "riskLevel": { "type": "enum", "values": ["낮음", "중간", "높음"] } } },
+    "FinancialProduct":{ "fields": { "name": { "type": "string", "required": true }, "category": { "type": "enum", "values": ["환헤지", "무역금융", "보험", "정책자금"], "required": true } } },
+    "Institution":     { "fields": { "name": { "type": "string", "required": true } } },
+    "EligibilityRule": { "fields": { "rule_id": { "type": "string", "required": true }, "product_id": { "type": "ref", "class": "FinancialProduct", "required": true }, "field": { "type": "string", "required": true }, "fact_path": { "type": "string", "required": true }, "operator": { "type": "enum", "ref": "operators", "required": true }, "value": { "type": "any", "required_if_value_operator": true }, "required": { "type": "boolean", "required": true }, "failure_reason": { "type": "string", "required": true }, "missing_info_question": { "type": "string", "required": true }, "source_id": { "type": "ref", "class": "EvidenceSource", "required": true } } },
+    "EvidenceSource":  { "fields": { "institution": { "type": "string", "required": true }, "document_title": { "type": "string", "required": true }, "url": { "type": "url", "required": true }, "verified_on": { "type": "date", "required": true }, "supported_fields": { "type": "array", "minItems": 1, "required": true }, "page_or_section": { "type": "string", "required": true }, "source_kind": { "type": "enum", "values": ["product_terms", "market_data"], "required": true } } }
+  },
+  "graphNodeClasses": ["Institution", "Risk", "Purpose", "FinancialProduct"],
+  "externalRangePrefix": { "EligibilityRule": "rule:", "EvidenceSource": "src:" },
+  "relations": {
+    "hasTransaction":   { "domain": ["Company"],                    "range": "TradeTransaction", "kind": "derived" },
+    "createsExposure":  { "domain": ["TradeTransaction"],           "range": "Exposure",         "kind": "derived" },
+    "hasExposure":      { "domain": ["Company"],                    "range": "Exposure",         "kind": "derived" },
+    "exposedToCurrency":{ "domain": ["Exposure"],                   "range": "Currency",         "kind": "derived" },
+    "exposedToCountry": { "domain": ["TradeTransaction"],           "range": "Country",          "kind": "derived" },
+    "hasRisk":          { "domain": ["Exposure"],                   "range": "Risk",             "kind": "derived" },
+    "hasPurpose":       { "domain": ["Company", "Risk"],            "range": "Purpose",          "kind": "derived" },
+    "matchedByRule":    { "domain": ["Purpose"],                    "range": "FinancialProduct", "kind": "derived" },
+    "eligibleFor":      { "domain": ["Company"],                    "range": "FinancialProduct", "kind": "derived" },
+    "mitigates":        { "domain": ["FinancialProduct"],           "range": "Risk",             "kind": "asserted" },
+    "supportsPurpose":  { "domain": ["FinancialProduct"],           "range": "Purpose",          "kind": "asserted" },
+    "requires":         { "domain": ["FinancialProduct"],           "range": "EligibilityRule",  "kind": "asserted" },
+    "excludes":         { "domain": ["FinancialProduct"],           "range": "FinancialProduct", "kind": "asserted" },
+    "providedBy":       { "domain": ["FinancialProduct"],           "range": "Institution",      "kind": "asserted" },
+    "supportedBy":      { "domain": ["FinancialProduct", "EligibilityRule"], "range": "EvidenceSource", "kind": "asserted" }
+  },
+  "riskToPurpose": { "fx_rate": "fx_hedge", "liquidity": "working_capital", "country": "guarantee_insurance", "credit": "guarantee_insurance" }
+}

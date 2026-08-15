@@ -1,0 +1,3 @@
+country,currency,tradeType,direction,amount,months
+US,USD,export,in,300000,3
+DE,EUR,import,out,80000,4

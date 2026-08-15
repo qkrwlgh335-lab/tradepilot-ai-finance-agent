@@ -1,0 +1,300 @@
+{
+  "schema_version": "1",
+  "status": "cached",
+  "provider": "UN Comtrade",
+  "reporter": {
+    "code": 410,
+    "iso2": "KR",
+    "name": "Republic of Korea"
+  },
+  "period": 2025,
+  "fetched_at": "2026-08-02T16:33:03.529Z",
+  "unit": "USD",
+  "classification": "HS",
+  "commodity": "TOTAL",
+  "source_url": "https://comtradeplus.un.org/TradeFlow",
+  "documentation_url": "https://uncomtrade.org/docs/un-comtrade-api/",
+  "countries": {
+    "AR": {
+      "imports_usd": 819963845,
+      "exports_usd": 569465819
+    },
+    "AU": {
+      "imports_usd": 32079635691,
+      "exports_usd": 14172394705
+    },
+    "AT": {
+      "imports_usd": 1603682814,
+      "exports_usd": 1122684428
+    },
+    "BD": {
+      "imports_usd": 613232508,
+      "exports_usd": 1758021778
+    },
+    "BE": {
+      "imports_usd": 1444317000,
+      "exports_usd": 3906148769
+    },
+    "BR": {
+      "imports_usd": 6605275324,
+      "exports_usd": 7705610877
+    },
+    "MM": {
+      "imports_usd": 576682941,
+      "exports_usd": 307514817
+    },
+    "KH": {
+      "imports_usd": 518740341,
+      "exports_usd": 678905796
+    },
+    "CA": {
+      "imports_usd": 6563905849,
+      "exports_usd": 10208110064
+    },
+    "LK": {
+      "imports_usd": 109355567,
+      "exports_usd": 233989409
+    },
+    "CL": {
+      "imports_usd": 4741055379,
+      "exports_usd": 1681301807
+    },
+    "CN": {
+      "imports_usd": 141887335178,
+      "exports_usd": 130646977538
+    },
+    "CO": {
+      "imports_usd": 1192625341,
+      "exports_usd": 1384533852
+    },
+    "CZ": {
+      "imports_usd": 1276689761,
+      "exports_usd": 3505896421
+    },
+    "DK": {
+      "imports_usd": 1635992607,
+      "exports_usd": 2658686024
+    },
+    "EE": {
+      "imports_usd": 95600521,
+      "exports_usd": 158023328
+    },
+    "FI": {
+      "imports_usd": 1100407705,
+      "exports_usd": 454118439
+    },
+    "FR": {
+      "imports_usd": 8646541023,
+      "exports_usd": 6428665833
+    },
+    "DE": {
+      "imports_usd": 21628662375,
+      "exports_usd": 9271326377
+    },
+    "GR": {
+      "imports_usd": 482866029,
+      "exports_usd": 948604483
+    },
+    "HK": {
+      "imports_usd": 4021592156,
+      "exports_usd": 34812619625
+    },
+    "HU": {
+      "imports_usd": 821062780,
+      "exports_usd": 3880387570
+    },
+    "IS": {
+      "imports_usd": 22349623,
+      "exports_usd": 57606884
+    },
+    "ID": {
+      "imports_usd": 11303929643,
+      "exports_usd": 6993527648
+    },
+    "IE": {
+      "imports_usd": 1412363142,
+      "exports_usd": 1142266722
+    },
+    "IL": {
+      "imports_usd": 1528695299,
+      "exports_usd": 1931473397
+    },
+    "IT": {
+      "imports_usd": 7899793987,
+      "exports_usd": 4484579553
+    },
+    "JP": {
+      "imports_usd": 48820176533,
+      "exports_usd": 28292821900
+    },
+    "KZ": {
+      "imports_usd": 1365220962,
+      "exports_usd": 2991502053
+    },
+    "KE": {
+      "imports_usd": 41219456,
+      "exports_usd": 184738362
+    },
+    "KW": {
+      "imports_usd": 7924069784,
+      "exports_usd": 660716428
+    },
+    "LV": {
+      "imports_usd": 109108450,
+      "exports_usd": 65489716
+    },
+    "LT": {
+      "imports_usd": 120361634,
+      "exports_usd": 379245863
+    },
+    "LU": {
+      "imports_usd": 134235979,
+      "exports_usd": 62429004
+    },
+    "MY": {
+      "imports_usd": 15512722381,
+      "exports_usd": 12362646751
+    },
+    "MX": {
+      "imports_usd": 8465807118,
+      "exports_usd": 12050227656
+    },
+    "MN": {
+      "imports_usd": 32420826,
+      "exports_usd": 660462196
+    },
+    "MA": {
+      "imports_usd": 231891167,
+      "exports_usd": 413909812
+    },
+    "OM": {
+      "imports_usd": 2788978132,
+      "exports_usd": 657898328
+    },
+    "NP": {
+      "imports_usd": 7384064,
+      "exports_usd": 32530193
+    },
+    "NL": {
+      "imports_usd": 10052950819,
+      "exports_usd": 9610581016
+    },
+    "NZ": {
+      "imports_usd": 1722740248,
+      "exports_usd": 3032209412
+    },
+    "NG": {
+      "imports_usd": 565475152,
+      "exports_usd": 531770376
+    },
+    "NO": {
+      "imports_usd": 1788824037,
+      "exports_usd": 563120651
+    },
+    "PK": {
+      "imports_usd": 255038187,
+      "exports_usd": 1317273927
+    },
+    "PE": {
+      "imports_usd": 2560539781,
+      "exports_usd": 629002796
+    },
+    "PH": {
+      "imports_usd": 3500718734,
+      "exports_usd": 11616343765
+    },
+    "PL": {
+      "imports_usd": 1060826009,
+      "exports_usd": 9003871572
+    },
+    "PT": {
+      "imports_usd": 410404263,
+      "exports_usd": 916727489
+    },
+    "QA": {
+      "imports_usd": 9923474037,
+      "exports_usd": 832683361
+    },
+    "RO": {
+      "imports_usd": 574929003,
+      "exports_usd": 606954620
+    },
+    "RU": {
+      "imports_usd": 6895668457,
+      "exports_usd": 4041357580
+    },
+    "SA": {
+      "imports_usd": 27431751145,
+      "exports_usd": 4856346241
+    },
+    "IN": {
+      "imports_usd": 6421528388,
+      "exports_usd": 19213200316
+    },
+    "SG": {
+      "imports_usd": 11374807810,
+      "exports_usd": 19552198723
+    },
+    "SK": {
+      "imports_usd": 775845619,
+      "exports_usd": 2698628052
+    },
+    "VN": {
+      "imports_usd": 31774234906,
+      "exports_usd": 62773670778
+    },
+    "SI": {
+      "imports_usd": 148796927,
+      "exports_usd": 960844494
+    },
+    "ZA": {
+      "imports_usd": 2200722964,
+      "exports_usd": 764189067
+    },
+    "ES": {
+      "imports_usd": 2625140864,
+      "exports_usd": 3558406687
+    },
+    "SE": {
+      "imports_usd": 2113804644,
+      "exports_usd": 1397206874
+    },
+    "CH": {
+      "imports_usd": 3938766625,
+      "exports_usd": 2078512690
+    },
+    "TH": {
+      "imports_usd": 6969186388,
+      "exports_usd": 8006612259
+    },
+    "AE": {
+      "imports_usd": 14116578365,
+      "exports_usd": 5660523239
+    },
+    "TR": {
+      "imports_usd": 1568358791,
+      "exports_usd": 9081161180
+    },
+    "UA": {
+      "imports_usd": 287301762,
+      "exports_usd": 520594344
+    },
+    "EG": {
+      "imports_usd": 71688429,
+      "exports_usd": 1668147268
+    },
+    "GB": {
+      "imports_usd": 4541049661,
+      "exports_usd": 7167093395
+    },
+    "US": {
+      "imports_usd": 73715410548,
+      "exports_usd": 123237977820
+    },
+    "UZ": {
+      "imports_usd": 22196236,
+      "exports_usd": 1786877218
+    }
+  },
+  "note": "한국 신고 기준 연간 상품 총교역 참고 통계이며 기업별 거래·예측값이 아닙니다."
+}

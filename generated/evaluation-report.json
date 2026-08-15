@@ -1,0 +1,511 @@
+{
+  "schema_version": "1",
+  "generated_at": "2026-08-15T16:35:04.011Z",
+  "source_digest": "9d6edaf4b3af768487fe911431d1c7b20cf2b8991f7733c5029016e9af3d9b84",
+  "source_files": [
+    "data/eligibility-rules.json",
+    "data/knowledge-graph.json",
+    "data/ontology-schema.json",
+    "data/product-docs.json",
+    "data/product-embeddings.json",
+    "data/samples.json",
+    "data/scenario-intent-corpus.json",
+    "data/scenario-intents.json",
+    "data/source-registry.json",
+    "eval/eligibility-cases.json",
+    "eval/evidence-cases.json",
+    "eval/governance-cases.json",
+    "eval/reproducibility-cases.json",
+    "eval/scenario-intent-cases.json",
+    "js/agent.js",
+    "js/brief.js",
+    "js/exposure.js",
+    "js/llm-provider.js",
+    "js/privacy.js",
+    "js/profile.js",
+    "js/rag.js",
+    "js/reasoner.js",
+    "js/risk.js",
+    "js/scenario-intent.js",
+    "js/scenario-plan.js",
+    "js/scenario-preset.js",
+    "js/scenario-semantic.js",
+    "js/scenario.js",
+    "js/sources.js",
+    "js/strategy.js",
+    "scripts/run-evaluation.mjs"
+  ],
+  "evaluated_revision": "working-tree",
+  "data_version": "tradepilot-eval-v1",
+  "case_counts": {
+    "scenario_intent": 12,
+    "eligibility": 6,
+    "evidence": 6,
+    "reliability": 4,
+    "governance": 6,
+    "total": 34
+  },
+  "metric_groups": {
+    "intent": {
+      "label": "Intent",
+      "metrics": {
+        "scenario_intent_accuracy": {
+          "value": 0.8333333333333334,
+          "target": 0.8,
+          "passed": true,
+          "numerator": 5,
+          "denominator": 6
+        },
+        "unsafe_execution_block_rate": {
+          "value": 1,
+          "target": 1,
+          "passed": true,
+          "numerator": 6,
+          "denominator": 6
+        }
+      }
+    },
+    "recommendation_safety": {
+      "label": "Recommendation Safety",
+      "metrics": {
+        "ineligible_product_recommendations": {
+          "value": 0,
+          "target": 0,
+          "passed": true
+        },
+        "missing_info_as_eligible": {
+          "value": 0,
+          "target": 0,
+          "passed": true
+        }
+      }
+    },
+    "evidence_retrieval": {
+      "label": "Evidence Retrieval",
+      "metrics": {
+        "recall_at_k": {
+          "value": 1,
+          "target": 0.9,
+          "passed": true,
+          "numerator": 6,
+          "denominator": 6
+        },
+        "exact_evidence_match": {
+          "value": 1,
+          "target": 0.9,
+          "passed": true,
+          "numerator": 6,
+          "denominator": 6
+        }
+      }
+    },
+    "reliability": {
+      "label": "Reliability",
+      "metrics": {
+        "reproducibility": {
+          "value": 1,
+          "target": 1,
+          "passed": true
+        },
+        "failure_completion": {
+          "value": 1,
+          "target": 1,
+          "passed": true
+        },
+        "offline_completion": {
+          "value": 1,
+          "target": 1,
+          "passed": true
+        }
+      }
+    },
+    "governance": {
+      "label": "Governance",
+      "metrics": {
+        "pii_raw_egress_block_rate": {
+          "value": 1,
+          "target": 1,
+          "passed": true,
+          "numerator": 6,
+          "denominator": 6
+        },
+        "candidate_rule_evidence_coverage": {
+          "value": 1,
+          "target": 1,
+          "passed": true,
+          "numerator": 4,
+          "denominator": 4
+        },
+        "candidate_source_coverage": {
+          "value": 1,
+          "target": 1,
+          "passed": true,
+          "numerator": 4,
+          "denominator": 4
+        }
+      },
+      "no_candidate": 5
+    }
+  },
+  "results_digest": "56c034b68c35c6f6848298d54b7e1e565674643687ab732519cf8e7fad446880",
+  "overall": {
+    "passed": true,
+    "passed_metrics": 12,
+    "total_metrics": 12
+  },
+  "details": {
+    "intent": [
+      {
+        "id": "eval-intent-payment-01",
+        "expected": "payment_delay",
+        "predicted_type": "payment_delay",
+        "predicted_target": "txn-1",
+        "executable": true,
+        "correct": true,
+        "adversarial": false
+      },
+      {
+        "id": "eval-intent-payment-02",
+        "expected": "payment_delay",
+        "predicted_type": "payment_delay",
+        "predicted_target": "txn-1",
+        "executable": true,
+        "correct": true,
+        "adversarial": false
+      },
+      {
+        "id": "eval-intent-revenue-01",
+        "expected": "receivable_drop",
+        "predicted_type": "receivable_drop",
+        "predicted_target": null,
+        "executable": true,
+        "correct": true,
+        "adversarial": false
+      },
+      {
+        "id": "eval-intent-revenue-02",
+        "expected": "receivable_drop",
+        "predicted_type": "receivable_drop",
+        "predicted_target": null,
+        "executable": true,
+        "correct": true,
+        "adversarial": false
+      },
+      {
+        "id": "eval-intent-fx-01",
+        "expected": "adverse_fx",
+        "predicted_type": null,
+        "predicted_target": null,
+        "executable": false,
+        "correct": false,
+        "adversarial": false
+      },
+      {
+        "id": "eval-intent-fx-02",
+        "expected": "adverse_fx",
+        "predicted_type": "adverse_fx",
+        "predicted_target": null,
+        "executable": true,
+        "correct": true,
+        "adversarial": false
+      },
+      {
+        "id": "eval-intent-out-of-scope-01",
+        "expected": "ask",
+        "predicted_type": null,
+        "predicted_target": null,
+        "executable": false,
+        "correct": false,
+        "adversarial": true
+      },
+      {
+        "id": "eval-intent-magnitude-01",
+        "expected": "block",
+        "predicted_type": null,
+        "predicted_target": null,
+        "executable": false,
+        "correct": false,
+        "adversarial": true
+      },
+      {
+        "id": "eval-intent-ambiguous-target-01",
+        "expected": "ask_target",
+        "predicted_type": null,
+        "predicted_target": null,
+        "executable": false,
+        "correct": false,
+        "adversarial": true
+      },
+      {
+        "id": "eval-intent-not-found-01",
+        "expected": "not_found",
+        "predicted_type": null,
+        "predicted_target": null,
+        "executable": false,
+        "correct": false,
+        "adversarial": false
+      },
+      {
+        "id": "eval-intent-prototype-01",
+        "expected": "ask",
+        "predicted_type": null,
+        "predicted_target": null,
+        "executable": false,
+        "correct": false,
+        "adversarial": true
+      },
+      {
+        "id": "eval-intent-negation-01",
+        "expected": "block",
+        "predicted_type": null,
+        "predicted_target": null,
+        "executable": false,
+        "correct": false,
+        "adversarial": false
+      }
+    ],
+    "eligibility": [
+      {
+        "id": "eval-eligibility-complete-01",
+        "exact": true,
+        "candidate_ids": [
+          "ecg_pre",
+          "fx_insurance",
+          "import_lc",
+          "trade_loan"
+        ],
+        "actual_by_purpose": {
+          "fx_hedge": {
+            "candidate": [
+              "fx_insurance"
+            ],
+            "pending": [],
+            "excluded": [],
+            "unavailable": [
+              "fwd",
+              "option",
+              "swap"
+            ]
+          },
+          "working_capital": {
+            "candidate": [
+              "import_lc",
+              "trade_loan"
+            ],
+            "pending": [],
+            "excluded": [],
+            "unavailable": []
+          },
+          "guarantee_insurance": {
+            "candidate": [
+              "ecg_pre"
+            ],
+            "pending": [],
+            "excluded": [],
+            "unavailable": []
+          }
+        }
+      },
+      {
+        "id": "eval-eligibility-missing-01",
+        "exact": true,
+        "candidate_ids": [],
+        "actual_by_purpose": {
+          "working_capital": {
+            "candidate": [],
+            "pending": [
+              "trade_loan"
+            ],
+            "excluded": [
+              "import_lc"
+            ],
+            "unavailable": []
+          }
+        }
+      },
+      {
+        "id": "eval-eligibility-scale-01",
+        "exact": true,
+        "candidate_ids": [],
+        "actual_by_purpose": {
+          "working_capital": {
+            "candidate": [],
+            "pending": [],
+            "excluded": [
+              "import_lc",
+              "trade_loan"
+            ],
+            "unavailable": []
+          },
+          "guarantee_insurance": {
+            "candidate": [],
+            "pending": [],
+            "excluded": [
+              "ecg_pre"
+            ],
+            "unavailable": []
+          }
+        }
+      },
+      {
+        "id": "eval-eligibility-horizon-01",
+        "exact": true,
+        "candidate_ids": [],
+        "actual_by_purpose": {
+          "fx_hedge": {
+            "candidate": [],
+            "pending": [],
+            "excluded": [
+              "fx_insurance"
+            ],
+            "unavailable": [
+              "fwd",
+              "option",
+              "swap"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval-eligibility-policy-01",
+        "exact": true,
+        "candidate_ids": [],
+        "actual_by_purpose": {
+          "policy_fund": {
+            "candidate": [],
+            "pending": [],
+            "excluded": [],
+            "unavailable": [
+              "policy_fund"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eval-eligibility-receivable-01",
+        "exact": true,
+        "candidate_ids": [],
+        "actual_by_purpose": {
+          "export_receivable": {
+            "candidate": [],
+            "pending": [],
+            "excluded": [],
+            "unavailable": [
+              "export_nego"
+            ]
+          }
+        }
+      }
+    ],
+    "evidence": [
+      {
+        "id": "eval-evidence-fx-scope-01",
+        "recalled": true,
+        "exact": true,
+        "top_chunk_id": "fxins-synthetic-scope",
+        "top_source_id": "src:demo-fx-protection-terms"
+      },
+      {
+        "id": "eval-evidence-fx-horizon-01",
+        "recalled": true,
+        "exact": true,
+        "top_chunk_id": "fxins-synthetic-horizon",
+        "top_source_id": "src:demo-fx-protection-terms"
+      },
+      {
+        "id": "eval-evidence-loan-grade-01",
+        "recalled": true,
+        "exact": true,
+        "top_chunk_id": "trade-loan-synthetic-eligibility",
+        "top_source_id": "src:demo-export-working-capital"
+      },
+      {
+        "id": "eval-evidence-loan-cap-01",
+        "recalled": true,
+        "exact": true,
+        "top_chunk_id": "trade-loan-synthetic-cap",
+        "top_source_id": "src:demo-export-working-capital"
+      },
+      {
+        "id": "eval-evidence-loan-window-01",
+        "recalled": true,
+        "exact": true,
+        "top_chunk_id": "trade-loan-synthetic-window",
+        "top_source_id": "src:demo-export-working-capital"
+      },
+      {
+        "id": "eval-evidence-guarantee-01",
+        "recalled": true,
+        "exact": true,
+        "top_chunk_id": "ecg-pre-synthetic-overview",
+        "top_source_id": "src:demo-pre-shipment-guarantee"
+      }
+    ],
+    "reliability": [
+      {
+        "id": "eval-reliability-repeat-a-01",
+        "operation": "repeat_pipeline",
+        "passed": true
+      },
+      {
+        "id": "eval-reliability-rag-failure-01",
+        "operation": "pipeline_with_failure",
+        "passed": true
+      },
+      {
+        "id": "eval-reliability-llm-failure-01",
+        "operation": "pipeline_with_failure",
+        "passed": true
+      },
+      {
+        "id": "eval-reliability-offline-01",
+        "operation": "offline_pipeline",
+        "passed": true
+      }
+    ],
+    "governance": [
+      {
+        "id": "eval-governance-raw-fields-01",
+        "passed": true,
+        "output_keys": [
+          "netRows"
+        ]
+      },
+      {
+        "id": "eval-governance-email-01",
+        "passed": true,
+        "output_keys": [
+          "counters"
+        ]
+      },
+      {
+        "id": "eval-governance-account-01",
+        "passed": true,
+        "output_keys": [
+          "counters"
+        ]
+      },
+      {
+        "id": "eval-governance-rrn-01",
+        "passed": true,
+        "output_keys": [
+          "counters"
+        ]
+      },
+      {
+        "id": "eval-governance-xss-01",
+        "passed": true,
+        "output_keys": [
+          "netRows"
+        ]
+      },
+      {
+        "id": "eval-governance-key-like-01",
+        "passed": true,
+        "output_keys": [
+          "cfarTotal"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "version": "1",
+  "dataset_id": "tradepilot-eval-reliability-v1",
+  "synthetic": true,
+  "notes": "동일 입력 재현성과 RAG·LLM·네트워크 실패 시 핵심 흐름 완주를 평가한다.",
+  "cases": [
+    {
+      "id": "eval-reliability-repeat-a-01",
+      "synthetic": true,
+      "notes": "A사 고정 입력을 두 번 실행한 결정론 결과 본문이 byte-identical이어야 한다.",
+      "operation": "repeat_pipeline",
+      "sample_id": "a",
+      "runs": 2,
+      "expected": { "completed": true, "byte_identical": true }
+    },
+    {
+      "id": "eval-reliability-rag-failure-01",
+      "synthetic": true,
+      "notes": "RAG 검색 실패를 주입해도 계산과 자격 판정은 완료되어야 한다.",
+      "operation": "pipeline_with_failure",
+      "sample_id": "a",
+      "failure": "rag",
+      "expected": { "completed": true, "calculation_preserved": true, "eligibility_preserved": true }
+    },
+    {
+      "id": "eval-reliability-llm-failure-01",
+      "synthetic": true,
+      "notes": "외부 설명 실패 시 로컬 규칙 설명으로 폴백하고 핵심 흐름은 완료되어야 한다.",
+      "operation": "pipeline_with_failure",
+      "sample_id": "a",
+      "failure": "llm",
+      "expected": { "completed": true, "fallback": "rules" }
+    },
+    {
+      "id": "eval-reliability-offline-01",
+      "synthetic": true,
+      "notes": "네트워크·키가 없는 off/mock 환경에서도 입력부터 상담 브리프까지 완료되어야 한다.",
+      "operation": "offline_pipeline",
+      "sample_id": "a",
+      "mode": "off",
+      "expected": { "completed": true, "external_calls": 0 }
+    }
+  ]
+}

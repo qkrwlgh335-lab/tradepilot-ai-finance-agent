@@ -1,0 +1,1284 @@
+{
+  "schema_version": "1",
+  "status": "cached",
+  "provider": "World Bank WDI",
+  "fetched_at": "2026-08-02T14:37:23.161Z",
+  "documentation_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures",
+  "indicators": {
+    "NY.GDP.MKTP.KD.ZG": {
+      "label": "GDP 성장률",
+      "unit": "%",
+      "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+    },
+    "FP.CPI.TOTL.ZG": {
+      "label": "소비자물가 상승률",
+      "unit": "%",
+      "source_url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+    },
+    "NE.EXP.GNFS.ZS": {
+      "label": "수출 비중/GDP",
+      "unit": "%",
+      "source_url": "https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS"
+    },
+    "NE.IMP.GNFS.ZS": {
+      "label": "수입 비중/GDP",
+      "unit": "%",
+      "source_url": "https://data.worldbank.org/indicator/NE.IMP.GNFS.ZS"
+    }
+  },
+  "countries": {
+    "AE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2024,
+        "value": 3.99181200361831
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.250865245598
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2023,
+        "value": 106.846123390953
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2023,
+        "value": 92.1988267361531
+      }
+    },
+    "AR": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.36733330217022
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2024,
+        "value": 219.883929014578
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 15.5556611218587
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 14.8089725633333
+      }
+    },
+    "AT": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.615747280959056
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.52719439956928
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 54.7019473752362
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 52.3178918904941
+      }
+    },
+    "AU": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.35039785076631
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.87403791660173
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 23.2444383508997
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 22.6570110371129
+      }
+    },
+    "BD": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 3.48990671836833
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 8.7687628116114
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 11.1161085689856
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 16.8344754735707
+      }
+    },
+    "BE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.983117967125935
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.46705543774613
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 75.4500710497086
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 77.4677176696568
+      }
+    },
+    "BR": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.2857464902475
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 5.01675279604836
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 17.8207228961707
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 17.4707593653367
+      }
+    },
+    "CA": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.74268536175708
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.07232411149103
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 31.3323868147182
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 32.1781181545045
+      }
+    },
+    "CH": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.30007790958307
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.154376978290185
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 78.0527434720482
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 69.109307845911
+      }
+    },
+    "CL": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.45925474781374
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 4.21293601694293
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 34.5635609348334
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 30.4208161074476
+      }
+    },
+    "CN": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.95994886240992
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.0595646916565403
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 21.0711983566772
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 16.8851895085539
+      }
+    },
+    "CO": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.64201548985928
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 5.14222911946201
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 14.9840475310756
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 20.384908937428
+      }
+    },
+    "CZ": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.58046673293437
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.45996367838865
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 66.9450959346234
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 61.0943414396528
+      }
+    },
+    "DE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.239578342117881
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.17178770949721
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 40.4347738545071
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 38.0780373654056
+      }
+    },
+    "DK": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.92843280014236
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.89367372703044
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 70.117072547021
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 59.1052317850969
+      }
+    },
+    "EE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.584308464789387
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 4.82920753628342
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 78.3623550209044
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 77.397561624675
+      }
+    },
+    "EG": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.39201068570188
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 14.0735136645934
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 19.8200284513845
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 31.5143194274435
+      }
+    },
+    "ES": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.82495400578509
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.699932857627
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 36.6374813887545
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 32.8133446186236
+      }
+    },
+    "FI": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.173444509584499
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.337874659400574
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 42.3266920911003
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 41.0692518801012
+      }
+    },
+    "FR": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.840949955479587
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.943770212469976
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 33.3928225145364
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 33.7995547693485
+      }
+    },
+    "GB": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.38844207858726
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.88306881626
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 30.5969582161816
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 31.8603712472379
+      }
+    },
+    "GR": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.07306882481713
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.48209745378857
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 39.4617692969977
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 43.9898535848415
+      }
+    },
+    "HK": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 3.48764886355949
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.43633540372673
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 199.757696650493
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 196.887724077323
+      }
+    },
+    "HU": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.509542309726868
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 4.41198445905562
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 72.6304321068483
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 68.1488717964849
+      }
+    },
+    "ID": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 5.10808904438025
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.9133344329508
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 22.8465482987858
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 20.5446587523346
+      }
+    },
+    "IE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 12.3375990291434
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.21044788475857
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 140.066665278394
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 99.892247065173
+      }
+    },
+    "IL": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.93114966387968
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.0414132155654
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 27.5583636636004
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 25.4308527107197
+      }
+    },
+    "IN": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 7.56666179284244
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.39884954182294
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 22.2630410669804
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 24.0051596190103
+      }
+    },
+    "IS": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.27946207863934
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 4.09085056006515
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 40.113798877848
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 42.3739315034894
+      }
+    },
+    "IT": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.539583636778445
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.5316682765282
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 32.2270197272539
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 30.2962066318587
+      }
+    },
+    "JP": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.19311288444599
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.17253034260248
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2024,
+        "value": 21.9799093698461
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2024,
+        "value": 22.8730294879112
+      }
+    },
+    "KE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.63261093844984
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 4.06912878540729
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 15.7640677825707
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 21.756976808552
+      }
+    },
+    "KH": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 5.34932084572877
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.35127105896507
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 68.6465213655928
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 67.4432273077899
+      }
+    },
+    "KW": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.731825804492
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.36195936682045
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2024,
+        "value": 55.7559768271522
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2024,
+        "value": 38.2349394412597
+      }
+    },
+    "KZ": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 6.5
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 11.3879454675914
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2024,
+        "value": 31.5871636865516
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2024,
+        "value": 25.5741795098408
+      }
+    },
+    "LK": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.9534339114043
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": -4.76386036960983
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 18.9673796128721
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 22.8416230396327
+      }
+    },
+    "LT": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.92007656461696
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.79170510860467
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 72.9839535290335
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 69.1223511663482
+      }
+    },
+    "LU": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.63787818818335
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.25723817871726
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 190.522135684017
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 159.364743494859
+      }
+    },
+    "LV": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.13786855731288
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.74577316751945
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 62.573000305163
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 67.1514535681639
+      }
+    },
+    "MA": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.59524349182247
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.701902154839545
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 41.9692139163022
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 51.1324428826402
+      }
+    },
+    "MM": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": -2.01184475795665
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2019,
+        "value": 8.82506696804558
+      }
+    },
+    "MN": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 6.84391415938607
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 8.60536487369695
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 68.0690875802365
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 62.6383532330381
+      }
+    },
+    "MX": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.561683456144578
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.80668650726485
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 39.6453397926899
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 40.2786127888756
+      }
+    },
+    "MY": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 5.17127082911057
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.38060872293692
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 70.9677892986947
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 65.4286310242549
+      }
+    },
+    "NG": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.01336180700973
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 23.0101235833333
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 1960,
+        "value": 9.24153046405216
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 1960,
+        "value": 16.9249824014777
+      }
+    },
+    "NL": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.78463214703797
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.2595766451366
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 80.6693413415314
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 69.4506290177353
+      }
+    },
+    "NO": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.08528185031417
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.05562484410077
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 45.3729560131418
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 33.6798759181448
+      }
+    },
+    "NP": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.43073194983359
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.65334269811436
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 8.82763359925247
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 33.7244112435844
+      }
+    },
+    "NZ": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.462871830681081
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.8397963180572
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2024,
+        "value": 24.7052588214056
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2024,
+        "value": 25.9555076213797
+      }
+    },
+    "OM": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.39787382295398
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.967741935483928
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2024,
+        "value": 66.072566156431
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2024,
+        "value": 48.7801054403878
+      }
+    },
+    "PE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 3.43056395124466
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.53125450314273
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 29.9698270665613
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 21.8456559013034
+      }
+    },
+    "PH": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.40240158710621
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 1.6587364525509
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 26.5503358170748
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 40.2432695143595
+      }
+    },
+    "PK": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 3.69842668749033
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.54555214890893
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 9.98520671042165
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 17.2083306683448
+      }
+    },
+    "PL": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 3.5727250346774
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.81419531520146
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 49.9505650987029
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 47.07961715558
+      }
+    },
+    "PT": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.86448007464475
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.33601620316701
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 43.6580888492067
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 42.7407881300597
+      }
+    },
+    "QA": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.90166036660493
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2024,
+        "value": 1.26734310292375
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2022,
+        "value": 68.5984131738821
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2022,
+        "value": 31.6152340257357
+      }
+    },
+    "RO": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.677829835052762
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 7.18903362292063
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 35.4843123183415
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 40.7304740245655
+      }
+    },
+    "RU": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.00117656925738
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 8.71986939402666
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 18.2030774281844
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 15.5069734394404
+      }
+    },
+    "SA": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 4.50246560191663
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.08420853585036
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 29.7448740074211
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 28.1733498505598
+      }
+    },
+    "SE": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.54316373266217
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.679869285243995
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 53.2286033614108
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 51.1066068253172
+      }
+    },
+    "SG": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 5.02588199508003
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 0.902998495002676
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 177.851484150301
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 142.454541263325
+      }
+    },
+    "SI": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.05992996255246
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 2.37284807226549
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 78.6394707763247
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 73.2758980628106
+      }
+    },
+    "SK": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 0.807418690144758
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 4.00042823495829
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 85.0946294110273
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 85.2478669923037
+      }
+    },
+    "TH": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.44247444990198
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": -0.133634356480207
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 71.1480976123329
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 67.2655883991896
+      }
+    },
+    "TR": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 3.60462514082589
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 34.8811629820306
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 24.8497719904256
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 25.0849063722672
+      }
+    },
+    "UA": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.82152376756284
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 12.7303341026903
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 25.3335332319508
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 51.8467407605299
+      }
+    },
+    "US": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 2.16138195623856
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2024,
+        "value": 2.94952520485207
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2024,
+        "value": 10.97469647515
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2024,
+        "value": 14.0413208226783
+      }
+    },
+    "UZ": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 7.69962477932913
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 8.79638847052461
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 22.0359976818514
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 35.3645415221702
+      }
+    },
+    "VN": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 8.01882998978245
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.3099931421974
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 98.2444078637672
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 92.0924009535244
+      }
+    },
+    "ZA": {
+      "NY.GDP.MKTP.KD.ZG": {
+        "year": 2025,
+        "value": 1.11462608103956
+      },
+      "FP.CPI.TOTL.ZG": {
+        "year": 2025,
+        "value": 3.20550474112603
+      },
+      "NE.EXP.GNFS.ZS": {
+        "year": 2025,
+        "value": 31.4101947337253
+      },
+      "NE.IMP.GNFS.ZS": {
+        "year": 2025,
+        "value": 29.5009024056375
+      }
+    }
+  },
+  "note": "세계은행 WDI의 국가 단위 거시·무역 참고지표 캐시. 양국 간 교역량·국가위험등급·예측값이 아닙니다."
+}

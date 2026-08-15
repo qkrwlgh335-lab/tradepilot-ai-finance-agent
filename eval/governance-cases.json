@@ -1,0 +1,75 @@
+{
+  "version": "1",
+  "dataset_id": "tradepilot-eval-governance-v1",
+  "synthetic": true,
+  "notes": "외부 설명용 analysisPayload가 허용된 집계 필드만 남기고 원문·PII·스크립트·키 모양 값을 반출하지 않는지 평가한다.",
+  "cases": [
+    {
+      "id": "eval-governance-raw-fields-01",
+      "synthetic": true,
+      "notes": "회사명·원본 계약·원거래는 제거하고 허용된 순노출만 남긴다.",
+      "input": {
+        "netRows": [{ "currency": "USD", "net": 200000, "receivable": 300000 }],
+        "companyName": "합성테스트상사",
+        "rawContractText": "합성 계약서 원문",
+        "cashflows": [{ "amount": 300000 }]
+      },
+      "expected_allowed_keys": ["netRows"],
+      "forbidden_markers": ["합성테스트상사", "합성 계약서 원문", "cashflows"]
+    },
+    {
+      "id": "eval-governance-email-01",
+      "synthetic": true,
+      "notes": "허용된 설명 필드 안의 합성 이메일도 마스킹한다.",
+      "input": {
+        "counters": [{ "q": "담당자 메일 synthetic.user@example.test", "a": "메일로 회신하지 않습니다." }]
+      },
+      "expected_allowed_keys": ["counters"],
+      "forbidden_markers": ["synthetic.user@example.test"]
+    },
+    {
+      "id": "eval-governance-account-01",
+      "synthetic": true,
+      "notes": "허용된 설명 필드 안의 합성 계좌형 숫자를 마스킹한다.",
+      "input": {
+        "counters": [{ "q": "합성 계좌 1234567890123", "a": "원문 숫자를 외부로 보내지 않습니다." }]
+      },
+      "expected_allowed_keys": ["counters"],
+      "forbidden_markers": ["1234567890123"]
+    },
+    {
+      "id": "eval-governance-rrn-01",
+      "synthetic": true,
+      "notes": "허용된 설명 필드 안의 합성 주민번호형 문자열을 마스킹한다.",
+      "input": {
+        "counters": [{ "q": "합성 식별번호 900101-1234567", "a": "식별정보를 제거합니다." }]
+      },
+      "expected_allowed_keys": ["counters"],
+      "forbidden_markers": ["900101-1234567"]
+    },
+    {
+      "id": "eval-governance-xss-01",
+      "synthetic": true,
+      "notes": "스크립트형 입력은 허용 스키마 밖에서 제거한다.",
+      "adversarial": ["xss"],
+      "input": {
+        "netRows": [{ "currency": "USD", "net": 1 }],
+        "rawHtml": "<img src=x onerror=syntheticAttack()>"
+      },
+      "expected_allowed_keys": ["netRows"],
+      "forbidden_markers": ["<img", "syntheticAttack"]
+    },
+    {
+      "id": "eval-governance-key-like-01",
+      "synthetic": true,
+      "notes": "실제 비밀이 아닌 합성 키 모양 마커도 허용 스키마 밖에서 제거한다.",
+      "adversarial": ["key_like"],
+      "input": {
+        "cfarTotal": 1,
+        "apiToken": "[SYNTHETIC_KEY_LIKE_VALUE]"
+      },
+      "expected_allowed_keys": ["cfarTotal"],
+      "forbidden_markers": ["SYNTHETIC_KEY_LIKE_VALUE", "apiToken"]
+    }
+  ]
+}

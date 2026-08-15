@@ -1,0 +1,42 @@
+{
+  "version": "1",
+  "dataset_id": "tradepilot-scenario-intent-holdout-v1",
+  "contains_real_customer_data": false,
+  "cases": [
+    { "id": "h-pd-01", "text": "바이어 대금 회수가 자꾸 뒤로 가면?", "expected": "payment_delay" },
+    { "id": "h-pd-02", "text": "외상으로 판 물건의 돈이 제때 안 들어오면?", "expected": "payment_delay" },
+    { "id": "h-pd-03", "text": "해외 고객의 송금이 미뤄지는 상황을 보여 줘", "expected": "payment_delay" },
+    { "id": "h-pd-04", "text": "미국 바이어 대금 회수가 지체되면?", "expected": "payment_delay" },
+    { "id": "h-pd-05", "text": "수취 예정금이 늦게 도착할 때 현금이 부족한가요?", "expected": "payment_delay" },
+    { "id": "h-pd-06", "text": "결제 약속이 뒤로 밀린 경우를 검증해 줘", "expected": "payment_delay" },
+
+    { "id": "h-rd-01", "text": "해외 판매가 꺾이면 자금이 얼마나 부족해져?", "expected": "receivable_drop" },
+    { "id": "h-rd-02", "text": "바이어 주문 축소로 받을 돈이 줄어드는 경우", "expected": "receivable_drop" },
+    { "id": "h-rd-03", "text": "수출 수요가 위축될 때를 보여 줘", "expected": "receivable_drop" },
+    { "id": "h-rd-04", "text": "매출채권 규모가 작아지면 위험은?", "expected": "receivable_drop" },
+    { "id": "h-rd-05", "text": "해외 영업 부진으로 수취대금이 줄면?", "expected": "receivable_drop" },
+    { "id": "h-rd-06", "text": "수출 물량 축소 상황을 다시 검증해 줘", "expected": "receivable_drop" },
+
+    { "id": "h-fx-01", "text": "외환시장이 흔들려 우리에게 손해가 나는 경우", "expected": "adverse_fx" },
+    { "id": "h-fx-02", "text": "달러 움직임이 나쁜 방향으로 가면?", "expected": "adverse_fx" },
+    { "id": "h-fx-03", "text": "원화 환산가치가 악화될 때를 보여 줘", "expected": "adverse_fx" },
+    { "id": "h-fx-04", "text": "외화 포지션의 평가손이 커지면?", "expected": "adverse_fx" },
+    { "id": "h-fx-05", "text": "통화시장이 급변해 손익이 나빠지는 상황", "expected": "adverse_fx" },
+    { "id": "h-fx-06", "text": "환변동 위험이 확대되는 경우를 검증해 줘", "expected": "adverse_fx" },
+
+    { "id": "h-low-01", "text": "금리가 오르면 대출은 어떻게 돼?", "expected": "ask" },
+    { "id": "h-low-02", "text": "새 공장을 지어도 될까?", "expected": "ask" },
+    { "id": "h-low-03", "text": "운송 보험을 가입해야 하나요?", "expected": "ask" },
+    { "id": "h-low-04", "text": "오늘 상담 예약을 잡아 줘", "expected": "ask" },
+
+    { "id": "h-safe-01", "text": "수출 매출이 반감되면?", "expected": "block" },
+    { "id": "h-safe-02", "text": "수출 매출이 갑절로 줄면?", "expected": "block" },
+    { "id": "h-safe-03", "text": "입금이 늦지 않으면?", "expected": "block" },
+    { "id": "h-safe-04", "text": "환율이 불리하지 않으면?", "expected": "block" },
+
+    { "id": "h-target-01", "text": "USD 수취대금 회수가 미뤄지면?", "expected": "ask_target" },
+    { "id": "h-target-02", "text": "독일 EUR 수취대금 회수가 늦어지면?", "expected": "not_found" },
+    { "id": "h-target-03", "text": "가장 큰 받을 돈이 늦어지면?", "expected": "payment_delay" },
+    { "id": "h-target-04", "text": "배 운송 지연으로 미국 거래처 입금이 늦으면?", "expected": "payment_delay" }
+  ]
+}

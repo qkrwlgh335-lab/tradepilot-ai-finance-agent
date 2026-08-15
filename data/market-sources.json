@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "data_key": "fx_rates",
+      "source_kind": "market_data",
+      "status": "cached",
+      "verification_status": "verified",
+      "source_id": "mkt:ecb-fx-reference",
+      "source_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.KRW+AUD+BRL+CAD+CHF+CNY+CZK+DKK+GBP+HKD+HUF+IDR+ILS+INR+ISK+JPY+MXN+MYR+NOK+NZD+PHP+PLN+RON+SEK+SGD+THB+TRY+USD+ZAR.EUR.SP00.A?format=csvdata&lastNObservations=320",
+      "documentation_url": "https://data.ecb.europa.eu/help/api/data",
+      "as_of": "2026-07-31",
+      "fetched_at": "2026-08-02T16:33:06.789Z",
+      "note": "ECB 공식 일별 기준환율 캐시 — EUR 교차방식으로 KRW 환산"
+    },
+    {
+      "data_key": "fx_volatility",
+      "source_kind": "market_data",
+      "status": "cached",
+      "verification_status": "verified",
+      "source_id": "mkt:ecb-derived-volatility",
+      "source_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.KRW+AUD+BRL+CAD+CHF+CNY+CZK+DKK+GBP+HKD+HUF+IDR+ILS+INR+ISK+JPY+MXN+MYR+NOK+NZD+PHP+PLN+RON+SEK+SGD+THB+TRY+USD+ZAR.EUR.SP00.A?format=csvdata&lastNObservations=320",
+      "documentation_url": "https://data.ecb.europa.eu/help/api/data",
+      "as_of": "2026-07-31",
+      "fetched_at": "2026-08-02T16:33:06.789Z",
+      "note": "ECB 공식 기준환율 320개 공통 관측치에서 로컬 산출"
+    }
+  ]
+}

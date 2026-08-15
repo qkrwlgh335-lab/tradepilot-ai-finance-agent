@@ -1,0 +1,75 @@
+{
+  "note": "PUBLIC SANITIZED DATA. 모든 상품명·매칭 수치는 포트폴리오 실행을 위한 합성 예시이며 실제 금융상품 조건이 아닙니다.",
+  "products": [
+    {
+      "id": "fwd",
+      "category": "환헤지",
+      "name": "선도환 계약(합성)",
+      "desc": "미래 특정일 환율을 지금 고정. 순노출 방어의 기본.",
+      "match": {
+        "when": "net_exposure_over",
+        "value": 50000
+      }
+    },
+    {
+      "id": "option",
+      "category": "환헤지",
+      "name": "통화옵션(합성)",
+      "desc": "환율이 유리하면 이익, 불리하면 방어. 프리미엄 비용 발생.",
+      "match": {
+        "when": "net_exposure_over",
+        "value": 100000
+      }
+    },
+    {
+      "id": "fx_insurance",
+      "category": "보험",
+      "name": "일반수출 환율보호 프로그램(합성)",
+      "desc": "합성 규칙으로 수출 환율위험 대응 후보를 검증합니다.",
+      "match": {
+        "when": "is_sme",
+        "value": true
+      }
+    },
+    {
+      "id": "trade_loan",
+      "category": "무역금융",
+      "name": "수출운전자금 프로그램(합성)",
+      "desc": "합성 규칙으로 수출 운전자금 후보를 검증합니다.",
+      "match": {
+        "when": "has_export",
+        "value": true
+      }
+    },
+    {
+      "id": "export_nego",
+      "category": "무역금융",
+      "name": "수출채권 조기회수 프로그램(합성)",
+      "desc": "수출 대금 조기 회수로 현금흐름 개선.",
+      "match": {
+        "when": "has_export",
+        "value": true
+      }
+    },
+    {
+      "id": "import_lc",
+      "category": "무역금융",
+      "name": "공급망 수입금융 프로그램(합성)",
+      "desc": "합성 규칙으로 공급망 수입금융 후보를 검증합니다.",
+      "match": {
+        "when": "has_import",
+        "value": true
+      }
+    },
+    {
+      "id": "policy_fund",
+      "category": "정책자금",
+      "name": "수출성장 자금 프로그램(합성)",
+      "desc": "합성 규칙으로 정책자금의 미검증 상태를 보여줍니다.",
+      "match": {
+        "when": "is_sme_exporter",
+        "value": true
+      }
+    }
+  ]
+}

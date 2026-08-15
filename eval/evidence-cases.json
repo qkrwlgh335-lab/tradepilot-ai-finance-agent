@@ -1,0 +1,74 @@
+{
+  "version": "1",
+  "dataset_id": "tradepilot-eval-evidence-v1",
+  "synthetic": true,
+  "notes": "공개용 합성 근거 청크 검색의 독립 기대 상수. 실제 기관의 공식 상품조건이 아니다.",
+  "cases": [
+    {
+      "id": "eval-evidence-fx-scope-01",
+      "synthetic": true,
+      "notes": "합성 환율보호 일반 수출 대상 범위 청크를 찾는다.",
+      "query": "합성 환율보호 일반 수출기업 대상과 수입거래 확인",
+      "product_id": "fx_insurance",
+      "rule_id": "rule:fx_insurance-trade-scope",
+      "expected_chunk_id": "fxins-synthetic-scope",
+      "expected_source_id": "src:demo-fx-protection-terms",
+      "top_k": 2
+    },
+    {
+      "id": "eval-evidence-fx-horizon-01",
+      "synthetic": true,
+      "notes": "합성 환율보호 최대 12개월 적용기간 청크를 찾는다.",
+      "query": "합성 일반수출 환율보호 적용기간 최대 12개월",
+      "product_id": "fx_insurance",
+      "rule_id": "rule:fx_insurance-max-horizon-export",
+      "expected_chunk_id": "fxins-synthetic-horizon",
+      "expected_source_id": "src:demo-fx-protection-terms",
+      "top_k": 2
+    },
+    {
+      "id": "eval-evidence-loan-grade-01",
+      "synthetic": true,
+      "notes": "합성 수출운전자금 내부등급·상담채널 기준 청크를 찾는다.",
+      "query": "합성 수출운전자금 내부등급 상담채널 지원대상",
+      "product_id": "trade_loan",
+      "rule_id": "rule:trade_loan-credit-grade",
+      "expected_chunk_id": "trade-loan-synthetic-eligibility",
+      "expected_source_id": "src:demo-export-working-capital",
+      "top_k": 2
+    },
+    {
+      "id": "eval-evidence-loan-cap-01",
+      "synthetic": true,
+      "notes": "합성 중소 125만·중견 175만 달러 상한 청크를 찾는다.",
+      "query": "합성 최근 1년 수출실적 중소기업 125만 달러 중견기업 175만 달러",
+      "product_id": "trade_loan",
+      "rule_id": "rule:trade_loan-export-cap",
+      "expected_chunk_id": "trade-loan-synthetic-cap",
+      "expected_source_id": "src:demo-export-working-capital",
+      "top_k": 2
+    },
+    {
+      "id": "eval-evidence-loan-window-01",
+      "synthetic": true,
+      "notes": "합성 수출운전자금 데모 운영기간 청크를 찾는다.",
+      "query": "합성 수출운전자금 데모 운영기간 2099년",
+      "product_id": "trade_loan",
+      "rule_id": "rule:trade_loan-effective",
+      "expected_chunk_id": "trade-loan-synthetic-window",
+      "expected_source_id": "src:demo-export-working-capital",
+      "top_k": 2
+    },
+    {
+      "id": "eval-evidence-guarantee-01",
+      "synthetic": true,
+      "notes": "합성 선적전 이행보증의 수출기업 지원 목적 청크를 찾는다.",
+      "query": "합성 선적전 이행보증 중소 중견 수출기업 제조 조달 자금",
+      "product_id": "ecg_pre",
+      "rule_id": "rule:ecg_pre-scale",
+      "expected_chunk_id": "ecg-pre-synthetic-overview",
+      "expected_source_id": "src:demo-pre-shipment-guarantee",
+      "top_k": 2
+    }
+  ]
+}

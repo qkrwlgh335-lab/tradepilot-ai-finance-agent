@@ -1,0 +1,98 @@
+{
+  "note": "예시 거래 데이터 — 실제 문서 업로드·자동 인식은 현재 구현 범위에 포함되지 않음",
+  "samples": [
+    {
+      "id": "a",
+      "title": "A사 — 자동차부품 수출·수입 병행",
+      "docType": "수출 인보이스 + 원자재 발주서",
+      "cashflows": [
+        {
+          "country": "US",
+          "currency": "USD",
+          "direction": "in",
+          "amount": 200000,
+          "months": 3,
+          "tradeType": "export"
+        },
+        {
+          "country": "VN",
+          "currency": "USD",
+          "direction": "in",
+          "amount": 100000,
+          "months": 3,
+          "tradeType": "export"
+        },
+        {
+          "country": "US",
+          "currency": "USD",
+          "direction": "out",
+          "amount": 100000,
+          "months": 2,
+          "tradeType": "import"
+        },
+        {
+          "country": "DE",
+          "currency": "EUR",
+          "direction": "out",
+          "amount": 80000,
+          "months": 4,
+          "tradeType": "import"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "title": "B사 — 일본 원재료 수입 중심",
+      "docType": "수입 계약서 + 수출 인보이스",
+      "cashflows": [
+        {
+          "country": "JP",
+          "currency": "JPY",
+          "direction": "out",
+          "amount": 30000000,
+          "months": 2,
+          "tradeType": "import"
+        },
+        {
+          "country": "US",
+          "currency": "USD",
+          "direction": "in",
+          "amount": 150000,
+          "months": 3,
+          "tradeType": "export"
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "title": "C사 — 중국 수출입 병행",
+      "docType": "수출 인보이스 + 수입 L/C",
+      "cashflows": [
+        {
+          "country": "CN",
+          "currency": "CNY",
+          "direction": "in",
+          "amount": 2000000,
+          "months": 4,
+          "tradeType": "export"
+        },
+        {
+          "country": "CN",
+          "currency": "CNY",
+          "direction": "out",
+          "amount": 800000,
+          "months": 2,
+          "tradeType": "import"
+        },
+        {
+          "country": "US",
+          "currency": "USD",
+          "direction": "in",
+          "amount": 120000,
+          "months": 3,
+          "tradeType": "export"
+        }
+      ]
+    }
+  ]
+}

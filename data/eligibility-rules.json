@@ -1,0 +1,283 @@
+{
+  "version": "public-demo-v1",
+  "note": "PUBLIC SANITIZED DATA. 기관별 실제 상품조건을 공개하지 않기 위해 합성한 규칙셋이다. 숫자·기간·등급·기관은 실제 상품을 의미하지 않으며, closed-world 판정·출처 추적·누락정보 보류 구조를 재현하기 위한 포트폴리오 데이터다.",
+  "rules": [
+    {
+      "rule_id": "rule:fx_insurance-trade-scope",
+      "product_id": "fx_insurance",
+      "field": "eligibility.trade_scope",
+      "fact_path": "company.hasExport",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 환율보호 프로그램은 수출거래를 대상으로 합니다.",
+      "missing_info_question": "각 거래의 수출/수입 구분을 입력해 주세요.",
+      "source_id": "src:demo-fx-protection-terms"
+    },
+    {
+      "rule_id": "rule:fx_insurance-max-horizon-export",
+      "product_id": "fx_insurance",
+      "field": "eligibility.max_horizon_months_export",
+      "fact_path": "exposure.maxExportHorizonMonths",
+      "operator": "lte",
+      "value": 12,
+      "required": true,
+      "failure_reason": "공개용 합성 규칙에서 수출 환율보호 기간은 최대 12개월입니다.",
+      "missing_info_question": "노출 만기(개월)를 입력해 주세요.",
+      "source_id": "src:demo-fx-protection-terms"
+    },
+    {
+      "rule_id": "rule:trade_loan-requires-export",
+      "product_id": "trade_loan",
+      "field": "eligibility.requires_export",
+      "fact_path": "company.hasExport",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 수출운전자금 프로그램은 수출기업을 대상으로 합니다.",
+      "missing_info_question": "각 거래의 수출/수입 구분을 입력해 주세요.",
+      "source_id": "src:demo-export-working-capital"
+    },
+    {
+      "rule_id": "rule:trade_loan-scale",
+      "product_id": "trade_loan",
+      "field": "eligibility.company_scale",
+      "fact_path": "company.companyScale",
+      "operator": "in",
+      "value": [
+        "sme",
+        "mid_market"
+      ],
+      "required": true,
+      "failure_reason": "공개용 합성 규칙은 중소·중견기업을 대상으로 합니다.",
+      "missing_info_question": "기업 규모(중소/중견/기타)를 확인해 주세요.",
+      "source_id": "src:demo-export-working-capital"
+    },
+    {
+      "rule_id": "rule:trade_loan-credit-grade",
+      "product_id": "trade_loan",
+      "field": "eligibility.credit_grade",
+      "fact_path": "company.creditGradeMeetsThreshold",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 내부등급 기준을 충족해야 합니다.",
+      "missing_info_question": "합성 내부등급 기준 충족 여부를 확인해 주세요.",
+      "source_id": "src:demo-export-working-capital"
+    },
+    {
+      "rule_id": "rule:trade_loan-export-cap",
+      "product_id": "trade_loan",
+      "field": "eligibility.export_record_cap",
+      "fact_path": "company.priorYearExportUsd",
+      "operator": "lte_by",
+      "value": {
+        "selector_fact_path": "company.companyScale",
+        "thresholds": {
+          "sme": 1250000,
+          "mid_market": 1750000
+        }
+      },
+      "required": true,
+      "failure_reason": "공개용 합성 규칙의 최근 1년 수출실적 상한은 중소기업 125만 달러, 중견기업 175만 달러입니다.",
+      "missing_info_question": "최근 1년 수출실적(USD)과 기업 규모를 확인해 주세요.",
+      "source_id": "src:demo-export-working-capital"
+    },
+    {
+      "rule_id": "rule:trade_loan-review-channel",
+      "product_id": "trade_loan",
+      "field": "eligibility.review_channel_confirmation",
+      "fact_path": "company.reviewChannelConfirmed",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 규칙에서 상담채널 사전확인이 필요합니다.",
+      "missing_info_question": "상담채널 사전확인 여부를 입력해 주세요.",
+      "source_id": "src:demo-export-working-capital"
+    },
+    {
+      "rule_id": "rule:trade_loan-effective",
+      "product_id": "trade_loan",
+      "field": "product.effective_window",
+      "fact_path": "context.today",
+      "operator": "date_within",
+      "value": {
+        "from": "2026-01-01",
+        "to": "2099-12-31"
+      },
+      "required": true,
+      "failure_reason": "공개용 합성 프로그램의 데모 운영기간 내에서만 지원됩니다.",
+      "missing_info_question": "분석 기준일 정보가 필요합니다.",
+      "source_id": "src:demo-export-working-capital"
+    },
+    {
+      "rule_id": "rule:ecg_pre-requires-export",
+      "product_id": "ecg_pre",
+      "field": "eligibility.requires_export",
+      "fact_path": "company.hasExport",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 선적전 보증 프로그램은 수출기업을 대상으로 합니다.",
+      "missing_info_question": "각 거래의 수출/수입 구분을 입력해 주세요.",
+      "source_id": "src:demo-pre-shipment-guarantee"
+    },
+    {
+      "rule_id": "rule:ecg_pre-scale",
+      "product_id": "ecg_pre",
+      "field": "eligibility.company_scale",
+      "fact_path": "company.companyScale",
+      "operator": "in",
+      "value": [
+        "sme",
+        "mid_market"
+      ],
+      "required": true,
+      "failure_reason": "공개용 합성 보증 규칙은 중소·중견기업을 대상으로 합니다.",
+      "missing_info_question": "기업 규모(중소/중견/기타)를 확인해 주세요.",
+      "source_id": "src:demo-pre-shipment-guarantee"
+    },
+    {
+      "rule_id": "rule:fwd-company-type",
+      "product_id": "fwd",
+      "field": "eligibility.company_type",
+      "fact_path": "company.companyType",
+      "operator": "in",
+      "value": [
+        "corporation",
+        "sole_proprietor"
+      ],
+      "required": true,
+      "failure_reason": "공개용 합성 선도환 규칙은 법인 또는 개인사업자를 대상으로 합니다.",
+      "missing_info_question": "기업 형태(법인/개인사업자)를 선택해 주세요.",
+      "source_id": "src:demo-forward"
+    },
+    {
+      "rule_id": "rule:fwd-internet-banking-required",
+      "product_id": "fwd",
+      "field": "eligibility.internet_banking_enrolled",
+      "fact_path": "company.internetBankingEnrolled",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 선도환 규칙은 데모 전자채널 가입을 요구합니다.",
+      "missing_info_question": "데모 전자채널 가입 여부를 확인해 주세요.",
+      "source_id": "src:demo-forward"
+    },
+    {
+      "rule_id": "rule:export_nego-requires-export",
+      "product_id": "export_nego",
+      "field": "eligibility.requires_export",
+      "fact_path": "company.hasExport",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 수출채권 조기회수 프로그램은 수출거래를 대상으로 합니다.",
+      "missing_info_question": "각 거래의 수출/수입 구분을 입력해 주세요.",
+      "source_id": "src:demo-export-receivable"
+    },
+    {
+      "rule_id": "rule:import_lc-requires-import",
+      "product_id": "import_lc",
+      "field": "eligibility.requires_import",
+      "fact_path": "company.hasImport",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 공급망 수입금융 프로그램은 수입거래를 대상으로 합니다.",
+      "missing_info_question": "수입 거래가 있는지 확인해 주세요.",
+      "source_id": "src:demo-import-support"
+    },
+    {
+      "rule_id": "rule:import_lc-scale",
+      "product_id": "import_lc",
+      "field": "eligibility.company_scale",
+      "fact_path": "company.companyScale",
+      "operator": "in",
+      "value": [
+        "sme",
+        "mid_market"
+      ],
+      "required": true,
+      "failure_reason": "공개용 합성 수입금융 규칙은 중소·중견기업을 대상으로 합니다.",
+      "missing_info_question": "기업 규모(중소/중견/기타)를 확인해 주세요.",
+      "source_id": "src:demo-import-support"
+    },
+    {
+      "rule_id": "rule:import_lc-manufacturer",
+      "product_id": "import_lc",
+      "field": "eligibility.manufacturer",
+      "fact_path": "company.isManufacturer",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 수입금융 규칙은 제조기업을 대상으로 합니다.",
+      "missing_info_question": "제조기업 해당 여부를 확인해 주세요.",
+      "source_id": "src:demo-import-support"
+    },
+    {
+      "rule_id": "rule:import_lc-supported-industry",
+      "product_id": "import_lc",
+      "field": "eligibility.demo_supply_chain_scope",
+      "fact_path": "company.supplyChainProgramEligible",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 수입금융 규칙은 데모 지정 공급망 업종을 대상으로 합니다.",
+      "missing_info_question": "데모 지정 공급망 업종 해당 여부를 확인해 주세요.",
+      "source_id": "src:demo-import-support"
+    },
+    {
+      "rule_id": "rule:import_lc-partner-guarantee",
+      "product_id": "import_lc",
+      "field": "eligibility.partner_guarantee",
+      "fact_path": "company.partnerGuaranteeConfirmed",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 수입금융 규칙은 데모 제휴보증 확인을 요구합니다.",
+      "missing_info_question": "데모 제휴보증 확인 여부를 입력해 주세요.",
+      "source_id": "src:demo-import-support"
+    },
+    {
+      "rule_id": "rule:import_lc-credit-grade",
+      "product_id": "import_lc",
+      "field": "eligibility.credit_grade",
+      "fact_path": "company.creditGradeMeetsThreshold",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 내부등급 기준을 충족해야 합니다.",
+      "missing_info_question": "합성 내부등급 기준 충족 여부를 확인해 주세요.",
+      "source_id": "src:demo-import-support"
+    },
+    {
+      "rule_id": "rule:import_lc-review-channel",
+      "product_id": "import_lc",
+      "field": "eligibility.review_channel_confirmation",
+      "fact_path": "company.reviewChannelConfirmed",
+      "operator": "is_true",
+      "required": true,
+      "failure_reason": "공개용 합성 수입금융 규칙에서 상담채널 사전확인이 필요합니다.",
+      "missing_info_question": "상담채널 사전확인 여부를 입력해 주세요.",
+      "source_id": "src:demo-import-support"
+    },
+    {
+      "rule_id": "rule:import_lc-effective",
+      "product_id": "import_lc",
+      "field": "product.effective_window",
+      "fact_path": "context.today",
+      "operator": "date_within",
+      "value": {
+        "from": "2026-01-01",
+        "to": "2099-12-31"
+      },
+      "required": true,
+      "failure_reason": "공개용 합성 수입금융 프로그램의 데모 운영기간 내에서만 지원됩니다.",
+      "missing_info_question": "분석 기준일 정보가 필요합니다.",
+      "source_id": "src:demo-import-support"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "rule_id": "rule:fwd-individual-limit-approved",
+      "product_id": "fwd",
+      "reason": "공개용 합성 선도환의 개별 거래한도 조건은 의도적으로 미정으로 두어 knowledge gap 처리를 검증합니다.",
+      "missing_info_question": "개별 거래한도 승인 여부는 데모 상담채널 확인이 필요합니다."
+    },
+    {
+      "rule_id": "rule:export_nego-detailed-eligibility",
+      "product_id": "export_nego",
+      "reason": "공개용 합성 수출채권 프로그램의 상세 심사조건은 의도적으로 미정으로 두어 knowledge gap 처리를 검증합니다.",
+      "missing_info_question": "상세 심사조건은 데모 상담채널 확인이 필요합니다."
+    }
+  ]
+}

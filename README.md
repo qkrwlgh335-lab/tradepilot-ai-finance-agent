@@ -29,19 +29,19 @@
 
 ### 1. 거래 위험 요약과 근거
 
-![거래 위험 요약 화면](docs/screenshots/01-overview.png)
+![거래 위험 요약 화면](docs/screenshots/01-overview.jpg)
 
 ### 2. 개인화 금융 액션 플랜
 
-![개인화 금융 액션 플랜](docs/screenshots/02-action-plan.png)
+![개인화 금융 액션 플랜](docs/screenshots/02-action-plan.jpg)
 
 ### 3. 규칙 판정과 근거가 연결된 상담 후보
 
-![상담 후보와 규칙 근거](docs/screenshots/03-product-evidence.png)
+![상담 후보와 규칙 근거](docs/screenshots/03-product-evidence.jpg)
 
 ### 4. 반사실 시나리오 재계산
 
-![반사실 시나리오 비교](docs/screenshots/04-counterfactual.png)
+![반사실 시나리오 비교](docs/screenshots/04-counterfactual.jpg)
 
 ## 문제와 접근
 
